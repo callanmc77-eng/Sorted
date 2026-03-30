@@ -10,7 +10,7 @@ import { OpenBookingsButton } from '@/components/actions/OpenBookingsButton'
 
 export function PlannerPage() {
   const { isLoaded, error: mapsError } = useGoogleMaps()
-  const { buildRoute } = useRouteBuilder()
+  const { buildRoute } = useRouteBuilder(isLoaded)
   const { isCalculating, routeResult, error, selectedVenueIds, date, startLocation } =
     useBookingStore()
   const { venues } = useAdminStore()

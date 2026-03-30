@@ -1,6 +1,4 @@
 import { useBookingStore } from '@/store/bookingStore'
-import { useAdminStore } from '@/store/adminStore'
-import { CitySelector } from './CitySelector'
 import { DatePicker } from './DatePicker'
 import { PaxInput } from './PaxInput'
 import { StartTimePicker } from './StartTimePicker'
@@ -10,9 +8,8 @@ import { TransportToggle } from './TransportToggle'
 import { BufferInput } from './BufferInput'
 
 export function InputPanel() {
-  const { cityId, date, pax, startTime, startLocation, transportMode,
-          setCity, setDate, setPax, setStartTime, setStartLocation, setTransportMode } = useBookingStore()
-  const { cities } = useAdminStore()
+  const { date, pax, startTime, startLocation, transportMode,
+          setDate, setPax, setStartTime, setStartLocation, setTransportMode } = useBookingStore()
 
   return (
     <div className="flex flex-col gap-5">
@@ -20,7 +17,6 @@ export function InputPanel() {
         Trip Details
       </h2>
 
-      <CitySelector value={cityId} onChange={setCity} cities={cities} />
       <DatePicker value={date} onChange={setDate} />
       <PaxInput value={pax} onChange={setPax} />
 
