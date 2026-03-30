@@ -7,7 +7,11 @@ import { StartLocationInput } from './StartLocationInput'
 import { TransportToggle } from './TransportToggle'
 import { BufferInput } from './BufferInput'
 
-export function InputPanel() {
+interface Props {
+  isLoaded: boolean
+}
+
+export function InputPanel({ isLoaded }: Props) {
   const { date, pax, startTime, startLocation, transportMode,
           setDate, setPax, setStartTime, setStartLocation, setTransportMode } = useBookingStore()
 
@@ -25,7 +29,7 @@ export function InputPanel() {
         <TourDurationPicker />
       </div>
 
-      <StartLocationInput value={startLocation} onChange={setStartLocation} />
+      <StartLocationInput value={startLocation} onChange={setStartLocation} isLoaded={isLoaded} />
       <TransportToggle value={transportMode} onChange={setTransportMode} />
 
       <div className="border-t border-slate-100 pt-5">

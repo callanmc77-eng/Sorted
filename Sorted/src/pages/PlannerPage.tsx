@@ -25,7 +25,7 @@ export function PlannerPage() {
     <div className="flex h-[calc(100vh-3.5rem)] overflow-hidden bg-surface">
       {/* ── Left column: inputs ─────────────────────────────────────────────── */}
       <aside className="w-72 shrink-0 border-r border-slate-200 bg-surface-card overflow-y-auto p-6">
-        <InputPanel />
+        <InputPanel isLoaded={isLoaded} />
       </aside>
 
       {/* ── Centre: attraction selection + optimise button ───────────────────── */}

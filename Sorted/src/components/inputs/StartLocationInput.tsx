@@ -3,55 +3,35 @@ import { useEffect, useRef, useState } from 'react'
 interface Props {
   value: string
   onChange: (location: string) => void
+  isLoaded: boolean
 }
 
-export function StartLocationInput({ value, onChange }: Props) {
+export function StartLocationInput({ value, onChange, isLoaded }: Props) {
   const inputRef = useRef<HTMLInputElement>(null)
   const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null)
-  const [ready, setReady] = useState(false)
+  const [autocompleteReady, setAutocompleteReady] = useState(false)
 
-  // Initialise Places Autocomplete once Maps SDK is loaded
   useEffect(() => {
-    if (!inputRef.current) return
+    if (!isLoaded || !inputRef.current || autocompleteRef.current) return
 
-    const tryInit = () => {
-      if (
-        typeof google === 'undefined' ||
-        !google.maps?.places?.Autocomplete
-      ) return false
+    autocompleteRef.current = new google.maps.places.Autocomplete(inputRef.current, {
+      types: ['establishment', 'geocode'],
+      componentRestrictions: { country: 'ie' },
+      fields: ['formatted_address', 'name', 'geometry'],
+    })
 
-      autocompleteRef.current = new google.maps.places.Autocomplete(
-        inputRef.current!,
-        {
-          types: ['establishment', 'geocode'],
-          componentRestrictions: { country: 'ie' },
-          fields: ['formatted_address', 'name', 'geometry'],
-        },
-      )
+    autocompleteRef.current.addListener('place_changed', () => {
+      const place = autocompleteRef.current!.getPlace()
+      const display = place.name
+        ? place.formatted_address
+          ? `${place.name}, ${place.formatted_address}`
+          : place.name
+        : place.formatted_address ?? ''
+      onChange(display)
+    })
 
-      autocompleteRef.current.addListener('place_changed', () => {
-        const place = autocompleteRef.current!.getPlace()
-        // Prefer the place name (e.g. "The Westbury Hotel") with address appended
-        const display = place.name
-          ? place.formatted_address
-            ? `${place.name}, ${place.formatted_address}`
-            : place.name
-          : place.formatted_address ?? ''
-        onChange(display)
-      })
-
-      setReady(true)
-      return true
-    }
-
-    if (!tryInit()) {
-      // Maps not loaded yet — poll until it is
-      const interval = setInterval(() => {
-        if (tryInit()) clearInterval(interval)
-      }, 200)
-      return () => clearInterval(interval)
-    }
-  }, [onChange])
+    setAutocompleteReady(true)
+  }, [isLoaded, onChange])
 
   return (
     <label className="flex flex-col gap-1">
@@ -60,21 +40,28 @@ export function StartLocationInput({ value, onChange }: Props) {
         <input
           ref={inputRef}
           type="text"
-          defaultValue={value}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
           placeholder="e.g. The Westbury Hotel"
           className="bg-white border border-slate-200 rounded-lg px-3 py-2 text-sm text-navy w-full
                      placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20
-                     focus:border-navy/40"
+                     focus:border-navy/40 pr-8"
         />
-        {ready && (
-          <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300" title="Location suggestions active">
+        <span className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-300">
+          {autocompleteReady ? (
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
             </svg>
-          </span>
-        )}
+          ) : (
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/>
+            </svg>
+          )}
+        </span>
       </div>
-      <p className="text-xs text-slate-400">Type a hotel, address or landmark — suggestions will appear</p>
+      <p className="text-xs text-slate-400">
+        {autocompleteReady ? 'Type a hotel, address or landmark — suggestions will appear' : 'Loading location suggestions…'}
+      </p>
     </label>
   )
 }
