@@ -61,7 +61,6 @@ export function StartLocationInput({ value, onChange }: Props) {
           ref={inputRef}
           type="text"
           defaultValue={value}
-          onChange={(e) => onChange(e.target.value)}
           placeholder="e.g. The Westbury Hotel"
           className="bg-white border border-slate-200 rounded-lg px-3 py-2 text-sm text-navy w-full
                      placeholder:text-slate-300 focus:outline-none focus:ring-2 focus:ring-navy/20
