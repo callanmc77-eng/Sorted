@@ -27,6 +27,18 @@ export interface ScheduledStop {
   departureTime: string    // "12:00"
   travelFromPrev: number   // minutes of travel (0 for first stop)
   waitMins: number         // minutes waiting for slot (0 for continuous venues)
+  bufferMins: number       // buffer applied after this stop
+  feasible: true
+  isLunch?: false
+}
+
+export interface LunchStop {
+  isLunch: true
+  arrivalTime: string
+  departureTime: string
+  travelFromPrev: number
+  durationMins: number
+  bufferMins: number
   feasible: true
 }
 
@@ -36,7 +48,7 @@ export interface InfeasibleStop {
   feasible: false
 }
 
-export type RouteStop = ScheduledStop | InfeasibleStop
+export type RouteStop = ScheduledStop | LunchStop | InfeasibleStop
 
 export interface RouteResult {
   stops: RouteStop[]

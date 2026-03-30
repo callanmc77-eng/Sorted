@@ -53,6 +53,8 @@ export async function buildOptimalRoute(
   transportMode: TransportMode,
   bufferMins = 0,
   endTimeMins = 18 * 60,
+  includeLunch = false,
+  lunchDurationMins = 60,
 ): Promise<RouteResult> {
   const n = venues.length
 
@@ -91,8 +93,11 @@ export async function buildOptimalRoute(
   const stops: RouteStop[] = []
   let cursor = startTimeMins
   let prevNode = 0
+  const lunchAfterIndex = includeLunch ? Math.floor(n / 2) : -1
+  let feasibleCount = 0
 
-  for (const nodeIdx of order) {
+  for (let i = 0; i < order.length; i++) {
+    const nodeIdx = order[i]
     const venue = venues[nodeIdx - 1] // nodeIdx is 1-based
     const travelSecs = matrix.durations[prevNode][nodeIdx]
     const travelMins = Math.ceil(travelSecs / 60)
@@ -104,14 +109,11 @@ export async function buildOptimalRoute(
 
     if (!check.feasible) {
       stops.push({ venue, reason: check.reason!, feasible: false })
-      // Advance by visit duration so subsequent stops calculate realistically
       cursor += venue.avgVisitDurationMins + bufferMins
     } else {
-      // entryMins may be later than arrivalMins if the group has to wait for a slot
       const entryMins = check.entryMins!
       const departMins = entryMins + venue.avgVisitDurationMins
 
-      // Tour end-time cap check
       if (departMins > endTimeMins) {
         stops.push({
           venue,
@@ -127,14 +129,29 @@ export async function buildOptimalRoute(
           departureTime: formatTime(departMins),
           travelFromPrev: travelMins,
           waitMins: entryMins - arrivalMins,
+          bufferMins,
           feasible: true,
         })
-        // Cursor advances from actual departure, not from raw arrival
         cursor = departMins + bufferMins
+        feasibleCount++
       }
     }
 
     prevNode = nodeIdx
+
+    // Insert lunch after the midpoint stop
+    if (i === lunchAfterIndex - 1) {
+      stops.push({
+        isLunch: true,
+        arrivalTime: formatTime(cursor),
+        departureTime: formatTime(cursor + lunchDurationMins),
+        travelFromPrev: 0,
+        durationMins: lunchDurationMins,
+        bufferMins: 0,
+        feasible: true,
+      })
+      cursor += lunchDurationMins
+    }
   }
 
   const feasibleStops = stops.filter((s): s is Extract<RouteStop, { feasible: true }> => s.feasible)

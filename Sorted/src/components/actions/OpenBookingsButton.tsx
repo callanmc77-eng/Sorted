@@ -10,7 +10,7 @@ export function OpenBookingsButton({ result }: Props) {
   const { date, pax } = useBookingStore()
 
   const feasibleStops = result.stops.filter(
-    (s): s is ScheduledStop => s.feasible,
+    (s): s is ScheduledStop => s.feasible && !('isLunch' in s),
   )
 
   if (feasibleStops.length === 0) {
@@ -21,47 +21,36 @@ export function OpenBookingsButton({ result }: Props) {
     )
   }
 
-  const urls = feasibleStops.map((s) => buildBookingUrl(s.venue, date, pax))
-
-  function openAll() {
-    urls.forEach((url) => window.open(url, '_blank', 'noopener,noreferrer'))
-  }
+  const dateFormatted = date
+    ? new Date(date + 'T12:00:00').toLocaleDateString('en-IE', { day: 'numeric', month: 'short' })
+    : 'your date'
 
   return (
     <div className="flex flex-col gap-3">
-      {/* Primary: open all at once */}
-      <button
-        type="button"
-        onClick={openAll}
-        className="w-full py-3 px-4 bg-navy text-white rounded-xl font-semibold text-sm
-                   hover:bg-navy/90 transition-colors flex items-center justify-center gap-2"
-      >
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-        Open all {feasibleStops.length} booking pages
-      </button>
+      <div className="flex items-center justify-between">
+        <h3 className="text-xs font-semibold text-navy-muted uppercase tracking-wider">Booking links</h3>
+        <span className="text-xs text-slate-400">{pax} guest{pax !== 1 ? 's' : ''} · {dateFormatted}</span>
+      </div>
 
-      {/* Note about pre-filling */}
-      <p className="text-xs text-slate-400 text-center -mt-1">
-        Pages open without pre-filled dates — enter {pax} guest{pax !== 1 ? 's' : ''} and{' '}
-        {date ? new Date(date + 'T12:00:00').toLocaleDateString('en-IE', { day: 'numeric', month: 'short' }) : 'your date'} on each site
+      <p className="text-xs text-slate-400 -mt-1">
+        Click each link to open the booking page. Enter {pax} guest{pax !== 1 ? 's' : ''} and {dateFormatted} on each site.
       </p>
 
-      {/* Secondary: individual links */}
-      <div className="flex flex-col gap-1.5 pt-1">
+      <div className="flex flex-col gap-2">
         {feasibleStops.map((stop) => (
           <a
             key={stop.venue.id}
             href={buildBookingUrl(stop.venue, date, pax)}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between px-3 py-2 rounded-lg border border-slate-200
-                       bg-white hover:border-navy/30 hover:bg-slate-50 transition-colors group"
+            className="flex items-center justify-between px-4 py-3 rounded-xl border border-slate-200
+                       bg-white hover:border-navy/40 hover:shadow-sm transition-all group"
           >
-            <span className="text-xs font-medium text-navy">{stop.venue.name}</span>
-            <svg className="w-3 h-3 text-slate-300 group-hover:text-navy-muted transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <div>
+              <p className="text-sm font-semibold text-navy">{stop.venue.name}</p>
+              <p className="text-xs text-navy-muted mt-0.5">{stop.entryTime ?? stop.arrivalTime} → {stop.departureTime}</p>
+            </div>
+            <svg className="w-4 h-4 text-slate-300 group-hover:text-navy-muted transition-colors shrink-0 ml-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
               <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
             </svg>
