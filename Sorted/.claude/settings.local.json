@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm list:*)",
+      "Bash(npx:*)",
+      "WebSearch",
+      "WebFetch(domain:www.tcd.ie)",
+      "WebFetch(domain:www.visittrinity.ie)",
+      "WebFetch(domain:kilmainhamgaolmuseum.ie)",
+      "WebFetch(domain:www.guinnessstorehouse.com)",
+      "WebFetch(domain:www.heritageireland.ie)",
+      "WebFetch(domain:www.epicchq.com)",
+      "WebFetch(domain:www.christchurchcathedral.ie)",
+      "WebFetch(domain:guinnessstorehouse.com)",
+      "Bash(npm run:*)"
+    ]
+  }
+}

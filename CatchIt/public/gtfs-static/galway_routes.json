@@ -1,0 +1,79 @@
+[
+  {
+    "route_id": "5525_127894",
+    "route_short_name": "401",
+    "route_long_name": "Parkmore Road - Doctor Mannix Road",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127895",
+    "route_short_name": "402",
+    "route_long_name": "Seacrest - Eyre Square - Merlin Park",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127896",
+    "route_short_name": "404",
+    "route_long_name": "Eyre Square - Newcastle",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127897",
+    "route_short_name": "405",
+    "route_long_name": "Rahoon - Eyre Square - Ballybane",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127898",
+    "route_short_name": "407",
+    "route_long_name": "Eyre Square - Bóthar an Chóiste",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127899",
+    "route_short_name": "409",
+    "route_long_name": "Eyre Square - An Pháirc Mhór",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127900",
+    "route_short_name": "417",
+    "route_long_name": "Galway - Corofin Cross - Tuam",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127901",
+    "route_short_name": "419",
+    "route_long_name": "Galway - Clifden",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127906",
+    "route_short_name": "424",
+    "route_long_name": "Galway - Lettermullen",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127907",
+    "route_short_name": "425",
+    "route_long_name": "Galway - Roscommon - Longford",
+    "route_type": 3,
+    "agency_id": "7778020"
+  },
+  {
+    "route_id": "5525_127909",
+    "route_short_name": "434",
+    "route_long_name": "Galway - Gort",
+    "route_type": 3,
+    "agency_id": "7778020"
+  }
+]

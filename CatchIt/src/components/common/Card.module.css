@@ -1,0 +1,18 @@
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.card[role="button"],
+.card[onClick] {
+  cursor: pointer;
+}
+
+.noPadding {
+  padding: 0;
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "id": "guinness-storehouse",
+    "name": "Guinness Storehouse",
+    "address": "St. James's Gate, Dublin 8, D08 VF8H",
+    "coordinates": { "lat": 53.3419, "lng": -6.2868 },
+    "openingHours": {
+      "mon": { "open": "09:30", "close": "17:00" },
+      "tue": { "open": "09:30", "close": "17:00" },
+      "wed": { "open": "09:30", "close": "17:00" },
+      "thu": { "open": "09:30", "close": "17:00" },
+      "fri": { "open": "09:30", "close": "17:00" },
+      "sat": { "open": "09:30", "close": "21:00" },
+      "sun": { "open": "09:30", "close": "19:00" }
+    },
+    "lastEntry": "16:00",
+    "avgVisitDurationMins": 150,
+    "slotType": "continuous",
+    "bookingUrl": "https://www.guinnessstorehouse.com/tickets/",
+    "bookingSystem": "direct",
+    "notes": "Timed entry tickets — but slots are very frequent (every few minutes) so treated as continuous for scheduling. Pre-book online, sells out. Last entry 1 hr before close. Sat/Sun extended hours NEEDS VERIFICATION.",
+    "cityId": "dublin"
+  },
+  {
+    "id": "book-of-kells",
+    "name": "Book of Kells",
+    "address": "Trinity College Dublin, College Green, Dublin 2, D02 PN40",
+    "coordinates": { "lat": 53.3444, "lng": -6.2567 },
+    "openingHours": {
+      "mon": { "open": "09:30", "close": "17:30" },
+      "tue": { "open": "09:30", "close": "17:30" },
+      "wed": { "open": "09:30", "close": "17:30" },
+      "thu": { "open": "09:30", "close": "17:30" },
+      "fri": { "open": "09:30", "close": "17:30" },
+      "sat": { "open": "09:30", "close": "18:00" },
+      "sun": { "open": "09:30", "close": "17:00" }
+    },
+    "lastEntry": "17:00",
+    "avgVisitDurationMins": 90,
+    "slotType": "interval",
+    "slotIntervalMins": 15,
+    "bookingUrl": "https://bookofkells-tickets.visittrinity.ie/ticketbooth/shows/",
+    "bookingSystem": "ticketsolve",
+    "notes": "Timed entry every 15 minutes from opening. Pre-book online — sells out days in advance. Allow 90 min. Slot interval NEEDS VERIFICATION.",
+    "cityId": "dublin"
+  },
+  {
+    "id": "epic-museum",
+    "name": "EPIC The Irish Emigration Museum",
+    "address": "CHQ Building, Custom House Quay, Dublin 1, D01 K2C0",
+    "coordinates": { "lat": 53.3479, "lng": -6.2474 },
+    "openingHours": {
+      "mon": { "open": "10:00", "close": "18:45" },
+      "tue": { "open": "10:00", "close": "18:45" },
+      "wed": { "open": "10:00", "close": "18:45" },
+      "thu": { "open": "10:00", "close": "18:45" },
+      "fri": { "open": "10:00", "close": "18:45" },
+      "sat": { "open": "10:00", "close": "18:45" },
+      "sun": { "open": "10:00", "close": "18:45" }
+    },
+    "lastEntry": "17:00",
+    "avgVisitDurationMins": 120,
+    "slotType": "continuous",
+    "bookingUrl": "https://www.epicchq.com/visit/tickets-and-tours/",
+    "bookingSystem": "direct",
+    "notes": "Self-guided — walk in anytime between open and last entry (5pm). Open daily.",
+    "cityId": "dublin"
+  },
+  {
+    "id": "christ-church",
+    "name": "Christ Church Cathedral",
+    "address": "Christ Church Place, Dublin 8, D08 Y7P3",
+    "coordinates": { "lat": 53.3434, "lng": -6.2701 },
+    "openingHours": {
+      "mon": { "open": "09:30", "close": "18:00" },
+      "tue": { "open": "09:30", "close": "17:30" },
+      "wed": { "open": "09:30", "close": "18:00" },
+      "thu": { "open": "09:30", "close": "17:30" },
+      "fri": { "open": "09:30", "close": "18:00" },
+      "sat": { "open": "09:30", "close": "18:00" },
+      "sun": { "open": "12:30", "close": "15:00" }
+    },
+    "lastEntry": "17:15",
+    "avgVisitDurationMins": 60,
+    "slotType": "continuous",
+    "bookingUrl": "https://christchurchcathedral.ticketsolve.com/ticketbooth/shows/",
+    "bookingSystem": "ticketsolve",
+    "notes": "Self-guided — enter anytime. Last admission 45 min before closing. Sunday two windows (12:30–15:00 and 16:30–18:00) — model uses first window only. NEEDS VERIFICATION.",
+    "cityId": "dublin"
+  },
+  {
+    "id": "kilmainham-gaol",
+    "name": "Kilmainham Gaol",
+    "address": "Inchicore Rd, Kilmainham, Dublin 8, D08 RK52",
+    "coordinates": { "lat": 53.3418, "lng": -6.3103 },
+    "openingHours": {
+      "mon": { "open": "10:30", "close": "17:45" },
+      "tue": { "open": "10:30", "close": "17:45" },
+      "wed": { "open": "10:30", "close": "17:45" },
+      "thu": { "open": "10:30", "close": "17:45" },
+      "fri": { "open": "10:30", "close": "17:45" },
+      "sat": { "open": "10:30", "close": "17:45" },
+      "sun": { "open": "10:30", "close": "17:45" }
+    },
+    "lastEntry": "16:45",
+    "avgVisitDurationMins": 90,
+    "slotType": "fixed",
+    "fixedSlots": ["10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30"],
+    "bookingUrl": "https://kilmainhamgaolmuseum.ie/book/",
+    "bookingSystem": "manual",
+    "notes": "Guided tour only — pre-booking essential, books out weeks in advance. Tours run approximately hourly — exact slot times NEEDS VERIFICATION via heritageireland.ie. Closed 24–27 Dec.",
+    "cityId": "dublin"
+  },
+  {
+    "id": "little-museum",
+    "name": "Little Museum of Dublin",
+    "address": "15 St Stephen's Green, Dublin 2, D02 YD72",
+    "coordinates": { "lat": 53.3386, "lng": -6.2581 },
+    "openingHours": {
+      "mon": { "open": "09:30", "close": "17:00" },
+      "tue": { "open": "09:30", "close": "17:00" },
+      "wed": { "open": "09:30", "close": "17:00" },
+      "thu": { "open": "09:30", "close": "17:00" },
+      "fri": { "open": "09:30", "close": "17:00" },
+      "sat": { "open": "09:30", "close": "17:00" },
+      "sun": { "open": "09:30", "close": "17:00" }
+    },
+    "lastEntry": "16:30",
+    "avgVisitDurationMins": 30,
+    "slotType": "fixed",
+    "fixedSlots": ["09:30", "10:30", "11:30", "12:30", "13:30", "14:30", "15:30", "16:30"],
+    "bookingUrl": "https://littlemuseum.ticketsolve.com/ticketbooth/shows/",
+    "bookingSystem": "ticketsolve",
+    "notes": "Guided tours only — run on the hour (approximately). Tour is 29–30 min. Pre-book online. Slot times NEEDS VERIFICATION.",
+    "cityId": "dublin"
+  }
+]

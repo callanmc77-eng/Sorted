@@ -1,0 +1,20 @@
+.star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-tertiary);
+  transition: color var(--duration-fast), background var(--duration-fast);
+  flex-shrink: 0;
+}
+
+.star:hover {
+  background: var(--color-muted);
+  color: var(--color-star);
+}
+
+.star.active {
+  color: var(--color-star);
+}

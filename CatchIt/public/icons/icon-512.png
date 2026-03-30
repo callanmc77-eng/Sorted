@@ -1,0 +1,13 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+  <rect width='512' height='512' rx='102' fill='#4f46e5'/>
+  <rect x='61' y='128' width='384' height='256' rx='31' fill='white'/>
+  <rect x='102' y='144' width='77' height='61' fill='#4f46e5'/>
+  <rect x='215' y='144' width='77' height='61' fill='#4f46e5'/>
+  <rect x='327' y='144' width='77' height='61' fill='#4f46e5'/>
+  <rect x='215' y='241' width='77' height='92' fill='#c7d2fe'/>
+  <circle cx='138' cy='400' r='46' fill='white'/>
+  <circle cx='368' cy='400' r='46' fill='white'/>
+  <circle cx='138' cy='400' r='20' fill='#4f46e5'/>
+  <circle cx='368' cy='400' r='20' fill='#4f46e5'/>
+  <text x='256' y='481' text-anchor='middle' font-family='system-ui,sans-serif' font-size='46' font-weight='bold' fill='white'>Catch It</text>
+</svg>

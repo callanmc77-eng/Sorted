@@ -1,0 +1,2594 @@
+[
+  {
+    "stop_id": "8290B1357701",
+    "stop_name": "Longford Station",
+    "stop_lat": 53.724391,
+    "stop_lon": -7.796019
+  },
+  {
+    "stop_id": "8290B551581",
+    "stop_name": "Cloonfiugh",
+    "stop_lat": 53.673006,
+    "stop_lon": -7.90334
+  },
+  {
+    "stop_id": "8290B551591",
+    "stop_name": "Cloonfiugh",
+    "stop_lat": 53.672988365583,
+    "stop_lon": -7.90344558027992
+  },
+  {
+    "stop_id": "8290B553421",
+    "stop_name": "Lanesborough",
+    "stop_lat": 53.672425,
+    "stop_lon": -7.988831
+  },
+  {
+    "stop_id": "8290B553451",
+    "stop_name": "Lanesborough",
+    "stop_lat": 53.672775,
+    "stop_lon": -7.989467
+  },
+  {
+    "stop_id": "8290B557251",
+    "stop_name": "Killashee",
+    "stop_lat": 53.681559,
+    "stop_lon": -7.880448
+  },
+  {
+    "stop_id": "8290B557271",
+    "stop_name": "Killashee",
+    "stop_lat": 53.6815226099574,
+    "stop_lon": -7.88035729438366
+  },
+  {
+    "stop_id": "84605257301",
+    "stop_name": "Westside Park",
+    "stop_lat": 53.27458,
+    "stop_lon": -9.07952
+  },
+  {
+    "stop_id": "8460B0555441",
+    "stop_name": "Celestica",
+    "stop_lat": 53.30319,
+    "stop_lon": -8.994408
+  },
+  {
+    "stop_id": "8460B0555451",
+    "stop_name": "Medtronic",
+    "stop_lat": 53.300825,
+    "stop_lon": -8.991195
+  },
+  {
+    "stop_id": "8460B0555491",
+    "stop_name": "Celestica",
+    "stop_lat": 53.30255,
+    "stop_lon": -8.995373
+  },
+  {
+    "stop_id": "8460B5203201",
+    "stop_name": "Clayton Hotel",
+    "stop_lat": 53.291181,
+    "stop_lon": -8.988755
+  },
+  {
+    "stop_id": "8460B5213401",
+    "stop_name": "Ballybane Industrial Estate",
+    "stop_lat": 53.289533,
+    "stop_lon": -9.0127
+  },
+  {
+    "stop_id": "8460B5220101",
+    "stop_name": "Spanish Arch",
+    "stop_lat": 53.27036,
+    "stop_lon": -9.05466
+  },
+  {
+    "stop_id": "8460B5220201",
+    "stop_name": "Father Griffin Road",
+    "stop_lat": 53.268232,
+    "stop_lon": -9.05834
+  },
+  {
+    "stop_id": "8460B5220301",
+    "stop_name": "Father Griffin Avenue",
+    "stop_lat": 53.267876,
+    "stop_lon": -9.063008
+  },
+  {
+    "stop_id": "8460B522041",
+    "stop_name": "Ballybrit Business Park",
+    "stop_lat": 53.291868,
+    "stop_lon": -9.00662
+  },
+  {
+    "stop_id": "8460B5220601",
+    "stop_name": "Lios Ealtan",
+    "stop_lat": 53.268227,
+    "stop_lon": -9.066
+  },
+  {
+    "stop_id": "8460B5220701",
+    "stop_name": "Salthill Road Lower",
+    "stop_lat": 53.26677,
+    "stop_lon": -9.06927
+  },
+  {
+    "stop_id": "8460B5220801",
+    "stop_name": "Devon Park",
+    "stop_lat": 53.2649444486082,
+    "stop_lon": -9.0722443478604
+  },
+  {
+    "stop_id": "8460B5220901",
+    "stop_name": "Lenaboy Park",
+    "stop_lat": 53.26255,
+    "stop_lon": -9.07295
+  },
+  {
+    "stop_id": "8460B5221001",
+    "stop_name": "Salthill Upper",
+    "stop_lat": 53.260795,
+    "stop_lon": -9.074988
+  },
+  {
+    "stop_id": "8460B5221101",
+    "stop_name": "Salthill Promenade",
+    "stop_lat": 53.258296,
+    "stop_lon": -9.079017
+  },
+  {
+    "stop_id": "8460B5221201",
+    "stop_name": "Salthill Park",
+    "stop_lat": 53.259958,
+    "stop_lon": -9.080018
+  },
+  {
+    "stop_id": "8460B5221301",
+    "stop_name": "Dalysfort Road",
+    "stop_lat": 53.26172,
+    "stop_lon": -9.080003
+  },
+  {
+    "stop_id": "8460B5221401",
+    "stop_name": "Forster Park",
+    "stop_lat": 53.264226,
+    "stop_lon": -9.080186
+  },
+  {
+    "stop_id": "8460B522171",
+    "stop_name": "Salthill GAA",
+    "stop_lat": 53.263623,
+    "stop_lon": -9.087186
+  },
+  {
+    "stop_id": "8460B5221801",
+    "stop_name": "Threadneedle Road",
+    "stop_lat": 53.262749,
+    "stop_lon": -9.089397
+  },
+  {
+    "stop_id": "8460B5221901",
+    "stop_name": "Seamount",
+    "stop_lat": 53.257485,
+    "stop_lon": -9.090028
+  },
+  {
+    "stop_id": "8460B5222001",
+    "stop_name": "Ladies Beach",
+    "stop_lat": 53.2579,
+    "stop_lon": -9.085917
+  },
+  {
+    "stop_id": "8460B5222101",
+    "stop_name": "Salthill Promenade",
+    "stop_lat": 53.258503,
+    "stop_lon": -9.078948
+  },
+  {
+    "stop_id": "8460B5222201",
+    "stop_name": "Salthill Upper",
+    "stop_lat": 53.261237,
+    "stop_lon": -9.074805
+  },
+  {
+    "stop_id": "8460B5222301",
+    "stop_name": "Lenaboy Park",
+    "stop_lat": 53.26376,
+    "stop_lon": -9.07251
+  },
+  {
+    "stop_id": "8460B5222501",
+    "stop_name": "Devon Park",
+    "stop_lat": 53.26529,
+    "stop_lon": -9.07235
+  },
+  {
+    "stop_id": "8460B5222601",
+    "stop_name": "Salthill Road Lower",
+    "stop_lat": 53.2671,
+    "stop_lon": -9.06869
+  },
+  {
+    "stop_id": "8460B5222701",
+    "stop_name": "Lios Ealtan",
+    "stop_lat": 53.2682977600793,
+    "stop_lon": -9.06612181625675
+  },
+  {
+    "stop_id": "8460B5222801",
+    "stop_name": "Father Griffin Avenue",
+    "stop_lat": 53.267542,
+    "stop_lon": -9.062175
+  },
+  {
+    "stop_id": "8460B5222901",
+    "stop_name": "Father Griffin Road",
+    "stop_lat": 53.268576,
+    "stop_lon": -9.058108
+  },
+  {
+    "stop_id": "8460B522301",
+    "stop_name": "Pearse Stadium",
+    "stop_lat": 53.264351,
+    "stop_lon": -9.083157
+  },
+  {
+    "stop_id": "8460B522311",
+    "stop_name": "Spanish Arch",
+    "stop_lat": 53.270347,
+    "stop_lon": -9.054014
+  },
+  {
+    "stop_id": "8460B522331",
+    "stop_name": "Eyre Square",
+    "stop_lat": 53.2736187626422,
+    "stop_lon": -9.04884707532921
+  },
+  {
+    "stop_id": "8460B5223401",
+    "stop_name": "Círín na Mara",
+    "stop_lat": 53.26211,
+    "stop_lon": -9.112869
+  },
+  {
+    "stop_id": "8460B5223501",
+    "stop_name": "Cnoic na Foraoise",
+    "stop_lat": 53.262636,
+    "stop_lon": -9.116166
+  },
+  {
+    "stop_id": "8460B5223601",
+    "stop_name": "Sruthán Thiar",
+    "stop_lat": 53.260672,
+    "stop_lon": -9.117583
+  },
+  {
+    "stop_id": "8460B5223701",
+    "stop_name": "Seanghort",
+    "stop_lat": 53.260866,
+    "stop_lon": -9.10933
+  },
+  {
+    "stop_id": "8460B5223801",
+    "stop_name": "Gentian Hill",
+    "stop_lat": 53.2586,
+    "stop_lon": -9.10396
+  },
+  {
+    "stop_id": "8460B5223901",
+    "stop_name": "Knocknacarra Road",
+    "stop_lat": 53.259577,
+    "stop_lon": -9.102012
+  },
+  {
+    "stop_id": "8460B5224001",
+    "stop_name": "Brooklawn",
+    "stop_lat": 53.26195,
+    "stop_lon": -9.101054
+  },
+  {
+    "stop_id": "8460B5224101",
+    "stop_name": "Kingston Gardens",
+    "stop_lat": 53.264579,
+    "stop_lon": -9.100506
+  },
+  {
+    "stop_id": "8460B5224201",
+    "stop_name": "Manor Drive",
+    "stop_lat": 53.2667042982693,
+    "stop_lon": -9.09321559376756
+  },
+  {
+    "stop_id": "8460B5224301",
+    "stop_name": "The Gardens",
+    "stop_lat": 53.267247,
+    "stop_lon": -9.086918
+  },
+  {
+    "stop_id": "8460B5224401",
+    "stop_name": "Ardmore",
+    "stop_lat": 53.2682156438237,
+    "stop_lon": -9.08320992390643
+  },
+  {
+    "stop_id": "8460B5224701",
+    "stop_name": "Mount Eaton",
+    "stop_lat": 53.269174,
+    "stop_lon": -9.077672
+  },
+  {
+    "stop_id": "8460B5224801",
+    "stop_name": "The Nurseries",
+    "stop_lat": 53.268882,
+    "stop_lon": -9.072103
+  },
+  {
+    "stop_id": "8460B5224901",
+    "stop_name": "Maunsells Road",
+    "stop_lat": 53.270252,
+    "stop_lon": -9.071658
+  },
+  {
+    "stop_id": "8460B5225001",
+    "stop_name": "Shantalla Place",
+    "stop_lat": 53.273026,
+    "stop_lon": -9.072027
+  },
+  {
+    "stop_id": "8460B5225101",
+    "stop_name": "O'Conaire Road",
+    "stop_lat": 53.273533,
+    "stop_lon": -9.070675
+  },
+  {
+    "stop_id": "8460B5225201",
+    "stop_name": "Colmcille Road",
+    "stop_lat": 53.275391,
+    "stop_lon": -9.070961
+  },
+  {
+    "stop_id": "8460B5225301",
+    "stop_name": "McDara Road",
+    "stop_lat": 53.27498,
+    "stop_lon": -9.067638
+  },
+  {
+    "stop_id": "8460B5225401",
+    "stop_name": "Costello Road",
+    "stop_lat": 53.274363,
+    "stop_lon": -9.064264
+  },
+  {
+    "stop_id": "8460B5225501",
+    "stop_name": "University Hospital",
+    "stop_lat": 53.27606,
+    "stop_lon": -9.06361
+  },
+  {
+    "stop_id": "8460B5225601",
+    "stop_name": "University South",
+    "stop_lat": 53.27674,
+    "stop_lon": -9.06207
+  },
+  {
+    "stop_id": "8460B5225701",
+    "stop_name": "Galway Cathedral",
+    "stop_lat": 53.27551,
+    "stop_lon": -9.05715
+  },
+  {
+    "stop_id": "8460B5225901",
+    "stop_name": "Saint Francis Street",
+    "stop_lat": 53.275045,
+    "stop_lon": -9.05329
+  },
+  {
+    "stop_id": "8460B5226101",
+    "stop_name": "Eyre Square",
+    "stop_lat": 53.275066,
+    "stop_lon": -9.04963
+  },
+  {
+    "stop_id": "8460B5226201",
+    "stop_name": "Prospect Hill",
+    "stop_lat": 53.277816,
+    "stop_lon": -9.046325
+  },
+  {
+    "stop_id": "8460B5226301",
+    "stop_name": "Cill Ard",
+    "stop_lat": 53.278603,
+    "stop_lon": -9.045205
+  },
+  {
+    "stop_id": "8460B5226501",
+    "stop_name": "Liam Mellows Terrace",
+    "stop_lat": 53.280414,
+    "stop_lon": -9.042565
+  },
+  {
+    "stop_id": "8460B5226801",
+    "stop_name": "Bohermore Cemetery",
+    "stop_lat": 53.281911,
+    "stop_lon": -9.038988
+  },
+  {
+    "stop_id": "8460B5226901",
+    "stop_name": "The G Hotel",
+    "stop_lat": 53.2812,
+    "stop_lon": -9.03181
+  },
+  {
+    "stop_id": "8460B5227001",
+    "stop_name": "Woodlands Campus",
+    "stop_lat": 53.279859,
+    "stop_lon": -9.024782
+  },
+  {
+    "stop_id": "8460B5227101",
+    "stop_name": "Bon Secours Hospital",
+    "stop_lat": 53.278347,
+    "stop_lon": -9.021822
+  },
+  {
+    "stop_id": "8460B5227201",
+    "stop_name": "Renmore Park",
+    "stop_lat": 53.276829,
+    "stop_lon": -9.02381
+  },
+  {
+    "stop_id": "8460B5227301",
+    "stop_name": "Dun na Mara",
+    "stop_lat": 53.275435,
+    "stop_lon": -9.026071
+  },
+  {
+    "stop_id": "8460B5227401",
+    "stop_name": "Renmore Barracks",
+    "stop_lat": 53.273607,
+    "stop_lon": -9.028516
+  },
+  {
+    "stop_id": "8460B5227501",
+    "stop_name": "Hawthorn Drive",
+    "stop_lat": 53.2724,
+    "stop_lon": -9.021515
+  },
+  {
+    "stop_id": "8460B5227601",
+    "stop_name": "Rowan Avenue",
+    "stop_lat": 53.27307,
+    "stop_lon": -9.018833
+  },
+  {
+    "stop_id": "8460B5227701",
+    "stop_name": "Fuschia Drive",
+    "stop_lat": 53.272941,
+    "stop_lon": -9.016071
+  },
+  {
+    "stop_id": "8460B5227801",
+    "stop_name": "Ballyloughane Road",
+    "stop_lat": 53.274364,
+    "stop_lon": -9.01459
+  },
+  {
+    "stop_id": "8460B5227901",
+    "stop_name": "Gaelscoil Dara",
+    "stop_lat": 53.276907,
+    "stop_lon": -9.013631
+  },
+  {
+    "stop_id": "8460B5228001",
+    "stop_name": "Merlin Gate",
+    "stop_lat": 53.276394,
+    "stop_lon": -9.003078
+  },
+  {
+    "stop_id": "8460B5228101",
+    "stop_name": "ATU Galway",
+    "stop_lat": 53.27718,
+    "stop_lon": -9.00992
+  },
+  {
+    "stop_id": "8460B5228201",
+    "stop_name": "Merlin Park Hospital",
+    "stop_lat": 53.277242,
+    "stop_lon": -8.994161
+  },
+  {
+    "stop_id": "8460B5228301",
+    "stop_name": "Merlin Gate",
+    "stop_lat": 53.276485,
+    "stop_lon": -9.005104
+  },
+  {
+    "stop_id": "8460B5228401",
+    "stop_name": "ATU Galway",
+    "stop_lat": 53.2771129458502,
+    "stop_lon": -9.01056191792701
+  },
+  {
+    "stop_id": "8460B5228501",
+    "stop_name": "Gaelscoil Dara",
+    "stop_lat": 53.276692,
+    "stop_lon": -9.013581
+  },
+  {
+    "stop_id": "8460B5228601",
+    "stop_name": "Ballyloughane Road",
+    "stop_lat": 53.27406,
+    "stop_lon": -9.014478
+  },
+  {
+    "stop_id": "8460B5228701",
+    "stop_name": "Fuschia Drive",
+    "stop_lat": 53.2728776170142,
+    "stop_lon": -9.01611435151466
+  },
+  {
+    "stop_id": "8460B5228801",
+    "stop_name": "Rowan Avenue",
+    "stop_lat": 53.272874,
+    "stop_lon": -9.018648
+  },
+  {
+    "stop_id": "8460B5228901",
+    "stop_name": "Hawthorn Drive",
+    "stop_lat": 53.272285,
+    "stop_lon": -9.021318
+  },
+  {
+    "stop_id": "8460B5229001",
+    "stop_name": "Arbutus Avenue",
+    "stop_lat": 53.2724902891581,
+    "stop_lon": -9.02357157141729
+  },
+  {
+    "stop_id": "8460B5229101",
+    "stop_name": "Renmore Barracks",
+    "stop_lat": 53.273642,
+    "stop_lon": -9.028682
+  },
+  {
+    "stop_id": "8460B5229201",
+    "stop_name": "Dun na Mara",
+    "stop_lat": 53.275569,
+    "stop_lon": -9.026074
+  },
+  {
+    "stop_id": "8460B5229401",
+    "stop_name": "Renmore Park",
+    "stop_lat": 53.276919,
+    "stop_lon": -9.023812
+  },
+  {
+    "stop_id": "8460B5229501",
+    "stop_name": "Bon Secours Hospital",
+    "stop_lat": 53.278628,
+    "stop_lon": -9.021514
+  },
+  {
+    "stop_id": "8460B5229601",
+    "stop_name": "Woodlands Campus",
+    "stop_lat": 53.2802,
+    "stop_lon": -9.026935
+  },
+  {
+    "stop_id": "8460B5229701",
+    "stop_name": "The G Hotel",
+    "stop_lat": 53.2816,
+    "stop_lon": -9.03304
+  },
+  {
+    "stop_id": "8460B5229801",
+    "stop_name": "Bohermore Cemetery",
+    "stop_lat": 53.281877,
+    "stop_lon": -9.038717
+  },
+  {
+    "stop_id": "8460B5229901",
+    "stop_name": "Liam Mellows Terrace",
+    "stop_lat": 53.280882,
+    "stop_lon": -9.041482
+  },
+  {
+    "stop_id": "8460B5230001",
+    "stop_name": "Cill Ard",
+    "stop_lat": 53.278897,
+    "stop_lon": -9.044448
+  },
+  {
+    "stop_id": "8460B5230101",
+    "stop_name": "Eyre Square",
+    "stop_lat": 53.2747593973543,
+    "stop_lon": -9.04893497271276
+  },
+  {
+    "stop_id": "8460B5230201",
+    "stop_name": "Saint Francis Street",
+    "stop_lat": 53.27531,
+    "stop_lon": -9.053806
+  },
+  {
+    "stop_id": "8460B5230301",
+    "stop_name": "University South",
+    "stop_lat": 53.276386,
+    "stop_lon": -9.06118
+  },
+  {
+    "stop_id": "8460B5230401",
+    "stop_name": "University Hospital",
+    "stop_lat": 53.276392,
+    "stop_lon": -9.063489
+  },
+  {
+    "stop_id": "8460B5230501",
+    "stop_name": "Costello Road",
+    "stop_lat": 53.274308,
+    "stop_lon": -9.065417
+  },
+  {
+    "stop_id": "8460B5230601",
+    "stop_name": "McDara Road",
+    "stop_lat": 53.275104,
+    "stop_lon": -9.067835
+  },
+  {
+    "stop_id": "8460B5230701",
+    "stop_name": "Colmcille Road",
+    "stop_lat": 53.2753738279511,
+    "stop_lon": -9.0708110411262
+  },
+  {
+    "stop_id": "8460B5230801",
+    "stop_name": "O'Conaire Road",
+    "stop_lat": 53.273103,
+    "stop_lon": -9.070529
+  },
+  {
+    "stop_id": "8460B5230901",
+    "stop_name": "Shantalla Place",
+    "stop_lat": 53.272398,
+    "stop_lon": -9.072956
+  },
+  {
+    "stop_id": "8460B5231001",
+    "stop_name": "The Nurseries",
+    "stop_lat": 53.268726,
+    "stop_lon": -9.072474
+  },
+  {
+    "stop_id": "8460B5231101",
+    "stop_name": "Mount Eaton",
+    "stop_lat": 53.268951,
+    "stop_lon": -9.077397
+  },
+  {
+    "stop_id": "8460B5231201",
+    "stop_name": "Ardmore",
+    "stop_lat": 53.268152,
+    "stop_lon": -9.083343
+  },
+  {
+    "stop_id": "8460B5231301",
+    "stop_name": "The Gardens",
+    "stop_lat": 53.266754,
+    "stop_lon": -9.089739
+  },
+  {
+    "stop_id": "8460B5231401",
+    "stop_name": "Manor Drive",
+    "stop_lat": 53.2664262126102,
+    "stop_lon": -9.09413792740141
+  },
+  {
+    "stop_id": "8460B5231501",
+    "stop_name": "Kingston Gardens",
+    "stop_lat": 53.264773,
+    "stop_lon": -9.099912
+  },
+  {
+    "stop_id": "8460B5231601",
+    "stop_name": "Ionad Siopadóireachta Chnoc na Cathrach",
+    "stop_lat": 53.26337,
+    "stop_lon": -9.10468
+  },
+  {
+    "stop_id": "8460B5231701",
+    "stop_name": "Maunsells Road",
+    "stop_lat": 53.270458,
+    "stop_lon": -9.071798
+  },
+  {
+    "stop_id": "8460B5231801",
+    "stop_name": "Galway Cathedral",
+    "stop_lat": 53.27583,
+    "stop_lon": -9.05817
+  },
+  {
+    "stop_id": "8460B5231901",
+    "stop_name": "Prospect Hill",
+    "stop_lat": 53.276815,
+    "stop_lon": -9.047216
+  },
+  {
+    "stop_id": "8460B523201",
+    "stop_name": "Eyre Square",
+    "stop_lat": 53.274547,
+    "stop_lon": -9.048615
+  },
+  {
+    "stop_id": "8460B5232101",
+    "stop_name": "Bóthar Bhreandán Uí Eithir",
+    "stop_lat": 53.27627,
+    "stop_lon": -9.04664
+  },
+  {
+    "stop_id": "8460B5232301",
+    "stop_name": "College Road",
+    "stop_lat": 53.2766679169823,
+    "stop_lon": -9.04139459613488
+  },
+  {
+    "stop_id": "8460B5232401",
+    "stop_name": "Dexcom Stadium",
+    "stop_lat": 53.279225,
+    "stop_lon": -9.037783
+  },
+  {
+    "stop_id": "8460B5232501",
+    "stop_name": "Loyola Park",
+    "stop_lat": 53.2799815004188,
+    "stop_lon": -9.03655665017521
+  },
+  {
+    "stop_id": "8460B5232701",
+    "stop_name": "ATU Wellpark Road",
+    "stop_lat": 53.283912,
+    "stop_lon": -9.027864
+  },
+  {
+    "stop_id": "8460B5232801",
+    "stop_name": "Monivea Road",
+    "stop_lat": 53.2866665030772,
+    "stop_lon": -9.02217062206093
+  },
+  {
+    "stop_id": "8460B5233001",
+    "stop_name": "Monivea Park",
+    "stop_lat": 53.28895,
+    "stop_lon": -9.01415
+  },
+  {
+    "stop_id": "8460B5233101",
+    "stop_name": "Ballybane Shopping Centre",
+    "stop_lat": 53.286421,
+    "stop_lon": -9.011721
+  },
+  {
+    "stop_id": "8460B5233201",
+    "stop_name": "Rahylin Glebe",
+    "stop_lat": 53.282805,
+    "stop_lon": -9.010186
+  },
+  {
+    "stop_id": "8460B5233301",
+    "stop_name": "Clareview Park",
+    "stop_lat": 53.281148,
+    "stop_lon": -9.006383
+  },
+  {
+    "stop_id": "8460B5233401",
+    "stop_name": "Ballybane Neighbourhood Village",
+    "stop_lat": 53.282788,
+    "stop_lon": -9.003692
+  },
+  {
+    "stop_id": "8460B5233501",
+    "stop_name": "Gortcam",
+    "stop_lat": 53.285836,
+    "stop_lon": -9.002273
+  },
+  {
+    "stop_id": "8460B5233601",
+    "stop_name": "Glenavon Drive",
+    "stop_lat": 53.28729,
+    "stop_lon": -9.003753
+  },
+  {
+    "stop_id": "8460B5233801",
+    "stop_name": "Ballybane Cottages",
+    "stop_lat": 53.288606,
+    "stop_lon": -9.002209
+  },
+  {
+    "stop_id": "8460B5233901",
+    "stop_name": "The Meadows",
+    "stop_lat": 53.289799,
+    "stop_lon": -8.998292
+  },
+  {
+    "stop_id": "8460B5234201",
+    "stop_name": "Briarhill Business Park",
+    "stop_lat": 53.293339,
+    "stop_lon": -8.984305
+  },
+  {
+    "stop_id": "8460B5234301",
+    "stop_name": "Ballybrit Crescent",
+    "stop_lat": 53.296974,
+    "stop_lon": -8.986023
+  },
+  {
+    "stop_id": "8460B5234401",
+    "stop_name": "Ballybrit Crescent",
+    "stop_lat": 53.297333,
+    "stop_lon": -8.986092
+  },
+  {
+    "stop_id": "8460B5234501",
+    "stop_name": "Briarhill Business Park",
+    "stop_lat": 53.293394,
+    "stop_lon": -8.984126
+  },
+  {
+    "stop_id": "8460B5234601",
+    "stop_name": "Clayton Hotel",
+    "stop_lat": 53.2910541229746,
+    "stop_lon": -8.98891699933164
+  },
+  {
+    "stop_id": "8460B5234701",
+    "stop_name": "Lios Caisil",
+    "stop_lat": 53.2909,
+    "stop_lon": -8.994448
+  },
+  {
+    "stop_id": "8460B5234801",
+    "stop_name": "The Meadows",
+    "stop_lat": 53.289829,
+    "stop_lon": -8.997858
+  },
+  {
+    "stop_id": "8460B5234901",
+    "stop_name": "Ballybane Cottages",
+    "stop_lat": 53.288705,
+    "stop_lon": -9.002211
+  },
+  {
+    "stop_id": "8460B5235001",
+    "stop_name": "Glenavon Drive",
+    "stop_lat": 53.287951,
+    "stop_lon": -9.004323
+  },
+  {
+    "stop_id": "8460B5235101",
+    "stop_name": "Gortcam",
+    "stop_lat": 53.2862155063504,
+    "stop_lon": -9.00224307645383
+  },
+  {
+    "stop_id": "8460B5235201",
+    "stop_name": "Ard Alainn",
+    "stop_lat": 53.283578,
+    "stop_lon": -9.001686
+  },
+  {
+    "stop_id": "8460B5235301",
+    "stop_name": "Ballybane Neighbourhood Village",
+    "stop_lat": 53.282059,
+    "stop_lon": -9.004935
+  },
+  {
+    "stop_id": "8460B5235401",
+    "stop_name": "Clareview Park",
+    "stop_lat": 53.280592,
+    "stop_lon": -9.00724
+  },
+  {
+    "stop_id": "8460B5235501",
+    "stop_name": "Rahylin Glebe",
+    "stop_lat": 53.281405,
+    "stop_lon": -9.009928
+  },
+  {
+    "stop_id": "8460B5235601",
+    "stop_name": "Ballybane Shopping Centre",
+    "stop_lat": 53.285026,
+    "stop_lon": -9.011154
+  },
+  {
+    "stop_id": "8460B5235801",
+    "stop_name": "Monivea Park",
+    "stop_lat": 53.2888447484771,
+    "stop_lon": -9.01547328801551
+  },
+  {
+    "stop_id": "8460B5236301",
+    "stop_name": "Mervue",
+    "stop_lat": 53.286186,
+    "stop_lon": -9.018425
+  },
+  {
+    "stop_id": "8460B5236401",
+    "stop_name": "Monivea Road",
+    "stop_lat": 53.286642,
+    "stop_lon": -9.021915
+  },
+  {
+    "stop_id": "8460B5236501",
+    "stop_name": "ATU Wellpark Road",
+    "stop_lat": 53.284393,
+    "stop_lon": -9.026345
+  },
+  {
+    "stop_id": "8460B5236601",
+    "stop_name": "Wellpark Retail Centre",
+    "stop_lat": 53.282871,
+    "stop_lon": -9.031843
+  },
+  {
+    "stop_id": "8460B5236701",
+    "stop_name": "Loyola Park",
+    "stop_lat": 53.2800756554331,
+    "stop_lon": -9.03606407842082
+  },
+  {
+    "stop_id": "8460B5236801",
+    "stop_name": "Dexcom Stadium",
+    "stop_lat": 53.27869,
+    "stop_lon": -9.038295
+  },
+  {
+    "stop_id": "8460B5236901",
+    "stop_name": "College Road",
+    "stop_lat": 53.276397,
+    "stop_lon": -9.041553
+  },
+  {
+    "stop_id": "8460B5237101",
+    "stop_name": "Woodquay",
+    "stop_lat": 53.276607,
+    "stop_lon": -9.052489
+  },
+  {
+    "stop_id": "8460B5237201",
+    "stop_name": "Galway Shopping Centre",
+    "stop_lat": 53.280473,
+    "stop_lon": -9.049255
+  },
+  {
+    "stop_id": "8460B5237301",
+    "stop_name": "Páirc Miondíolaíochta Thír Oileáin",
+    "stop_lat": 53.284434,
+    "stop_lon": -9.046776
+  },
+  {
+    "stop_id": "8460B5237501",
+    "stop_name": "Bóthar Chúil Each",
+    "stop_lat": 53.288131,
+    "stop_lon": -9.048168
+  },
+  {
+    "stop_id": "8460B5237601",
+    "stop_name": "Barr na Coille",
+    "stop_lat": 53.292536,
+    "stop_lon": -9.049816
+  },
+  {
+    "stop_id": "8460B5237701",
+    "stop_name": "Arda Thír Oileáin Thiar",
+    "stop_lat": 53.291772,
+    "stop_lon": -9.045947
+  },
+  {
+    "stop_id": "8460B5237801",
+    "stop_name": "Arda Thír Oileáin Thoir",
+    "stop_lat": 53.291254,
+    "stop_lon": -9.043504
+  },
+  {
+    "stop_id": "8460B5237901",
+    "stop_name": "Scoil San Phroinsias",
+    "stop_lat": 53.290115,
+    "stop_lon": -9.042232
+  },
+  {
+    "stop_id": "8460B5238001",
+    "stop_name": "Gleanntán an tSrutháin",
+    "stop_lat": 53.290811,
+    "stop_lon": -9.040734
+  },
+  {
+    "stop_id": "8460B5238101",
+    "stop_name": "Sceilig Ard",
+    "stop_lat": 53.292305,
+    "stop_lon": -9.03843
+  },
+  {
+    "stop_id": "8460B5238301",
+    "stop_name": "Cairéal Mór",
+    "stop_lat": 53.2960639255477,
+    "stop_lon": -9.03403579562034
+  },
+  {
+    "stop_id": "8460B5238401",
+    "stop_name": "Bóthar an Chóiste",
+    "stop_lat": 53.296433,
+    "stop_lon": -9.030789
+  },
+  {
+    "stop_id": "8460B5238501",
+    "stop_name": "Lochán",
+    "stop_lat": 53.297343,
+    "stop_lon": -9.027436
+  },
+  {
+    "stop_id": "8460B5238601",
+    "stop_name": "Maigh Riocaird",
+    "stop_lat": 53.298656,
+    "stop_lon": -9.024272
+  },
+  {
+    "stop_id": "8460B5238701",
+    "stop_name": "Lochán",
+    "stop_lat": 53.297254,
+    "stop_lon": -9.027404
+  },
+  {
+    "stop_id": "8460B5238801",
+    "stop_name": "Bóthar an Chóiste",
+    "stop_lat": 53.296235,
+    "stop_lon": -9.03089
+  },
+  {
+    "stop_id": "8460B5239101",
+    "stop_name": "Cairéal Mór",
+    "stop_lat": 53.295986,
+    "stop_lon": -9.033577
+  },
+  {
+    "stop_id": "8460B5239201",
+    "stop_name": "Sceilig Ard",
+    "stop_lat": 53.292362,
+    "stop_lon": -9.038041
+  },
+  {
+    "stop_id": "8460B5240701",
+    "stop_name": "Gleanntán an tSrutháin",
+    "stop_lat": 53.290559,
+    "stop_lon": -9.040772
+  },
+  {
+    "stop_id": "8460B5240901",
+    "stop_name": "Páirc Miondíolaíochta Thír Oileáin",
+    "stop_lat": 53.285266,
+    "stop_lon": -9.045893
+  },
+  {
+    "stop_id": "8460B5241001",
+    "stop_name": "Galway Shopping Centre",
+    "stop_lat": 53.280919,
+    "stop_lon": -9.048621
+  },
+  {
+    "stop_id": "8460B5241201",
+    "stop_name": "Eyre Square",
+    "stop_lat": 53.27497,
+    "stop_lon": -9.049846
+  },
+  {
+    "stop_id": "8460B5241301",
+    "stop_name": "Glenina Heights",
+    "stop_lat": 53.278791,
+    "stop_lon": -9.019936
+  },
+  {
+    "stop_id": "8460B5241401",
+    "stop_name": "Belmont",
+    "stop_lat": 53.277754,
+    "stop_lon": -9.014476
+  },
+  {
+    "stop_id": "8460B5241501",
+    "stop_name": "Lios an Uisce",
+    "stop_lat": 53.274509,
+    "stop_lon": -8.997426
+  },
+  {
+    "stop_id": "8460B5241801",
+    "stop_name": "Castlegar GAA",
+    "stop_lat": 53.277668,
+    "stop_lon": -8.976312
+  },
+  {
+    "stop_id": "8460B5241901",
+    "stop_name": "An Fiodan",
+    "stop_lat": 53.2819975658168,
+    "stop_lon": -8.9787805013746
+  },
+  {
+    "stop_id": "8460B5242001",
+    "stop_name": "Sraith Fhada",
+    "stop_lat": 53.2837605986748,
+    "stop_lon": -8.9807853543961
+  },
+  {
+    "stop_id": "8460B5242101",
+    "stop_name": "Merlin College",
+    "stop_lat": 53.28499,
+    "stop_lon": -8.982088
+  },
+  {
+    "stop_id": "8460B5242201",
+    "stop_name": "Doughiska",
+    "stop_lat": 53.286254,
+    "stop_lon": -8.983587
+  },
+  {
+    "stop_id": "8460B5242301",
+    "stop_name": "An Sean Bhaile",
+    "stop_lat": 53.288239231478,
+    "stop_lon": -8.98588234076402
+  },
+  {
+    "stop_id": "8460B5242401",
+    "stop_name": "Briarhill Shopping Centre",
+    "stop_lat": 53.290367,
+    "stop_lon": -8.988346
+  },
+  {
+    "stop_id": "8460B5242601",
+    "stop_name": "Briarhill Shopping Centre",
+    "stop_lat": 53.289736,
+    "stop_lon": -8.987402
+  },
+  {
+    "stop_id": "8460B5242701",
+    "stop_name": "Doughiska",
+    "stop_lat": 53.286522,
+    "stop_lon": -8.983833
+  },
+  {
+    "stop_id": "8460B5242801",
+    "stop_name": "Merlin College",
+    "stop_lat": 53.284964,
+    "stop_lon": -8.981983
+  },
+  {
+    "stop_id": "8460B5242901",
+    "stop_name": "An Fiodan",
+    "stop_lat": 53.2821678020861,
+    "stop_lon": -8.97884437587302
+  },
+  {
+    "stop_id": "8460B5243101",
+    "stop_name": "An Castan",
+    "stop_lat": 53.280966,
+    "stop_lon": -8.977482
+  },
+  {
+    "stop_id": "8460B5243201",
+    "stop_name": "Castlegar GAA",
+    "stop_lat": 53.277442,
+    "stop_lon": -8.976397
+  },
+  {
+    "stop_id": "8460B5243301",
+    "stop_name": "Lios an Uisce",
+    "stop_lat": 53.274905,
+    "stop_lon": -8.99955
+  },
+  {
+    "stop_id": "8460B5243401",
+    "stop_name": "Belmont",
+    "stop_lat": 53.277577,
+    "stop_lon": -9.014097
+  },
+  {
+    "stop_id": "8460B5243501",
+    "stop_name": "Glenina Heights",
+    "stop_lat": 53.278434,
+    "stop_lon": -9.01905
+  },
+  {
+    "stop_id": "8460B5243601",
+    "stop_name": "Forster Street",
+    "stop_lat": 53.2749151230331,
+    "stop_lon": -9.04655479215098
+  },
+  {
+    "stop_id": "8460B5243701",
+    "stop_name": "Eyre Square",
+    "stop_lat": 53.2749017151632,
+    "stop_lon": -9.04910338731818
+  },
+  {
+    "stop_id": "8460B5244001",
+    "stop_name": "Snipe Avenue",
+    "stop_lat": 53.281457,
+    "stop_lon": -9.064935
+  },
+  {
+    "stop_id": "8460B5244101",
+    "stop_name": "University Central",
+    "stop_lat": 53.282795,
+    "stop_lon": -9.066093
+  },
+  {
+    "stop_id": "8460B5244301",
+    "stop_name": "Corrib Village",
+    "stop_lat": 53.286876,
+    "stop_lon": -9.069044
+  },
+  {
+    "stop_id": "8460B5244401",
+    "stop_name": "Tudor Lawn",
+    "stop_lat": 53.288137,
+    "stop_lon": -9.074655
+  },
+  {
+    "stop_id": "8460B5244501",
+    "stop_name": "Hazel Park",
+    "stop_lat": 53.284652,
+    "stop_lon": -9.073472
+  },
+  {
+    "stop_id": "8460B5244601",
+    "stop_name": "Thomas Hynes Road",
+    "stop_lat": 53.2835,
+    "stop_lon": -9.072679
+  },
+  {
+    "stop_id": "8460B5244801",
+    "stop_name": "Laurel Park",
+    "stop_lat": 53.281464,
+    "stop_lon": -9.074202
+  },
+  {
+    "stop_id": "8460B5244901",
+    "stop_name": "John Coogan Park",
+    "stop_lat": 53.279349,
+    "stop_lon": -9.077478
+  },
+  {
+    "stop_id": "8460B5245001",
+    "stop_name": "Victoria Place",
+    "stop_lat": 53.273134,
+    "stop_lon": -9.048775
+  },
+  {
+    "stop_id": "8460B5245301",
+    "stop_name": "Ardilaun Road",
+    "stop_lat": 53.280633,
+    "stop_lon": -9.070658
+  },
+  {
+    "stop_id": "8460B5245401",
+    "stop_name": "Ardilaun Road",
+    "stop_lat": 53.280542,
+    "stop_lon": -9.070775
+  },
+  {
+    "stop_id": "8460B5254101",
+    "stop_name": "Woodquay",
+    "stop_lat": 53.276622,
+    "stop_lon": -9.052251
+  },
+  {
+    "stop_id": "8460B5255001",
+    "stop_name": "Inishannagh Park",
+    "stop_lat": 53.27697,
+    "stop_lon": -9.08063
+  },
+  {
+    "stop_id": "8460B5255201",
+    "stop_name": "Corrach Bui",
+    "stop_lat": 53.27523,
+    "stop_lon": -9.08219
+  },
+  {
+    "stop_id": "8460B5255401",
+    "stop_name": "Bothar Le Cheile",
+    "stop_lat": 53.2763,
+    "stop_lon": -9.07779
+  },
+  {
+    "stop_id": "8460B5255601",
+    "stop_name": "John Coogan Park",
+    "stop_lat": 53.27923,
+    "stop_lon": -9.07773
+  },
+  {
+    "stop_id": "8460B5255701",
+    "stop_name": "Laurel Park",
+    "stop_lat": 53.281552,
+    "stop_lon": -9.07434
+  },
+  {
+    "stop_id": "8460B5255801",
+    "stop_name": "Thomas Hynes Road",
+    "stop_lat": 53.283614,
+    "stop_lon": -9.072937
+  },
+  {
+    "stop_id": "8460B5255901",
+    "stop_name": "Hazel Park",
+    "stop_lat": 53.28559,
+    "stop_lon": -9.07436
+  },
+  {
+    "stop_id": "8460B5256001",
+    "stop_name": "Tudor Lawn",
+    "stop_lat": 53.288505,
+    "stop_lon": -9.074694
+  },
+  {
+    "stop_id": "8460B5256101",
+    "stop_name": "Corrib Village",
+    "stop_lat": 53.287599,
+    "stop_lon": -9.069572
+  },
+  {
+    "stop_id": "8460B5256301",
+    "stop_name": "University Central",
+    "stop_lat": 53.28311,
+    "stop_lon": -9.06613
+  },
+  {
+    "stop_id": "8460B525641",
+    "stop_name": "Eyre Square",
+    "stop_lat": 53.274485,
+    "stop_lon": -9.048533
+  },
+  {
+    "stop_id": "8460B5256501",
+    "stop_name": "Lower Newcastle",
+    "stop_lat": 53.278883,
+    "stop_lon": -9.063356
+  },
+  {
+    "stop_id": "8460B5256601",
+    "stop_name": "Upper Newcastle",
+    "stop_lat": 53.285565,
+    "stop_lon": -9.067931
+  },
+  {
+    "stop_id": "8460B5256701",
+    "stop_name": "Upper Newcastle",
+    "stop_lat": 53.285503,
+    "stop_lon": -9.067765
+  },
+  {
+    "stop_id": "8460B5256801",
+    "stop_name": "Lower Newcastle",
+    "stop_lat": 53.27858,
+    "stop_lon": -9.06307
+  },
+  {
+    "stop_id": "8460B5256901",
+    "stop_name": "Gateway Shopping Park",
+    "stop_lat": 53.272216,
+    "stop_lon": -9.096597
+  },
+  {
+    "stop_id": "8460B5257001",
+    "stop_name": "Garrai De Brun",
+    "stop_lat": 53.27028,
+    "stop_lon": -9.08968
+  },
+  {
+    "stop_id": "8460B5257101",
+    "stop_name": "Bishop O'Donnell Road",
+    "stop_lat": 53.271177,
+    "stop_lon": -9.086673
+  },
+  {
+    "stop_id": "8460B5257201",
+    "stop_name": "Gleann Dara",
+    "stop_lat": 53.273493,
+    "stop_lon": -9.084018
+  },
+  {
+    "stop_id": "8460B5257401",
+    "stop_name": "Westside Shopping Centre",
+    "stop_lat": 53.275589,
+    "stop_lon": -9.075899
+  },
+  {
+    "stop_id": "8460B5257501",
+    "stop_name": "Westside Community Centre",
+    "stop_lat": 53.27771,
+    "stop_lon": -9.07209
+  },
+  {
+    "stop_id": "8460B5257601",
+    "stop_name": "Snipe Lawn",
+    "stop_lat": 53.280107,
+    "stop_lon": -9.065126
+  },
+  {
+    "stop_id": "8460B5257701",
+    "stop_name": "Glenanail Drive",
+    "stop_lat": 53.286397,
+    "stop_lon": -9.031568
+  },
+  {
+    "stop_id": "8460B5257801",
+    "stop_name": "Mervue Industrial Estate",
+    "stop_lat": 53.287582,
+    "stop_lon": -9.027487
+  },
+  {
+    "stop_id": "8460B5257901",
+    "stop_name": "Riverside Industrial Estate",
+    "stop_lat": 53.288462,
+    "stop_lon": -9.024538
+  },
+  {
+    "stop_id": "8460B5258001",
+    "stop_name": "Pearse Avenue",
+    "stop_lat": 53.285645,
+    "stop_lon": -9.022866
+  },
+  {
+    "stop_id": "8460B5258101",
+    "stop_name": "O'Sullivan Park",
+    "stop_lat": 53.283755,
+    "stop_lon": -9.017917
+  },
+  {
+    "stop_id": "8460B5258501",
+    "stop_name": "Bayview Heights",
+    "stop_lat": 53.281005,
+    "stop_lon": -9.010534
+  },
+  {
+    "stop_id": "8460B5258601",
+    "stop_name": "Saint James Road",
+    "stop_lat": 53.281341,
+    "stop_lon": -9.015898
+  },
+  {
+    "stop_id": "8460B5258701",
+    "stop_name": "Walter Macken Place",
+    "stop_lat": 53.281734,
+    "stop_lon": -9.016744
+  },
+  {
+    "stop_id": "8460B5258801",
+    "stop_name": "O'Sullivan Park",
+    "stop_lat": 53.283646,
+    "stop_lon": -9.018019
+  },
+  {
+    "stop_id": "8460B5258901",
+    "stop_name": "Pearse Avenue",
+    "stop_lat": 53.28567,
+    "stop_lon": -9.0232
+  },
+  {
+    "stop_id": "8460B5259001",
+    "stop_name": "Riverside Industrial Estate",
+    "stop_lat": 53.288686,
+    "stop_lon": -9.023524
+  },
+  {
+    "stop_id": "8460B5259101",
+    "stop_name": "Mervue Industrial Estate",
+    "stop_lat": 53.287574,
+    "stop_lon": -9.027427
+  },
+  {
+    "stop_id": "8460B5259201",
+    "stop_name": "Glenanail Drive",
+    "stop_lat": 53.286253,
+    "stop_lon": -9.031534
+  },
+  {
+    "stop_id": "8460B5259301",
+    "stop_name": "Snipe Lawn",
+    "stop_lat": 53.280092,
+    "stop_lon": -9.064811
+  },
+  {
+    "stop_id": "8460B5259401",
+    "stop_name": "Shantalla Park",
+    "stop_lat": 53.27853,
+    "stop_lon": -9.07001
+  },
+  {
+    "stop_id": "8460B5259501",
+    "stop_name": "Westside Community Centre",
+    "stop_lat": 53.276501,
+    "stop_lon": -9.073448
+  },
+  {
+    "stop_id": "8460B5259601",
+    "stop_name": "Westside Park",
+    "stop_lat": 53.274399,
+    "stop_lon": -9.079228
+  },
+  {
+    "stop_id": "8460B5259701",
+    "stop_name": "Gleann Dara",
+    "stop_lat": 53.27343,
+    "stop_lon": -9.08329
+  },
+  {
+    "stop_id": "8460B5259801",
+    "stop_name": "Bishop O'Donnell Road",
+    "stop_lat": 53.27045,
+    "stop_lon": -9.08667
+  },
+  {
+    "stop_id": "8460B5259901",
+    "stop_name": "Garrai De Brun",
+    "stop_lat": 53.27019,
+    "stop_lon": -9.09018
+  },
+  {
+    "stop_id": "8460B526031",
+    "stop_name": "Maigh Riocaird",
+    "stop_lat": 53.298625741578,
+    "stop_lon": -9.02461644620442
+  },
+  {
+    "stop_id": "8460B5260401",
+    "stop_name": "Saint James Road",
+    "stop_lat": 53.281346,
+    "stop_lon": -9.014756
+  },
+  {
+    "stop_id": "8460B5260501",
+    "stop_name": "Bayview Heights",
+    "stop_lat": 53.2809391719914,
+    "stop_lon": -9.01084712804109
+  },
+  {
+    "stop_id": "8460B526061",
+    "stop_name": "Scoil San Phroinsias",
+    "stop_lat": 53.290126,
+    "stop_lon": -9.042997
+  },
+  {
+    "stop_id": "8460B526071",
+    "stop_name": "Arda Thír Oileáin Thoir",
+    "stop_lat": 53.291135,
+    "stop_lon": -9.043711
+  },
+  {
+    "stop_id": "8460B526081",
+    "stop_name": "Arda Thír Oileáin Thiar",
+    "stop_lat": 53.291535,
+    "stop_lon": -9.046286
+  },
+  {
+    "stop_id": "8460B526091",
+    "stop_name": "Barr na Coille",
+    "stop_lat": 53.291878,
+    "stop_lon": -9.048199
+  },
+  {
+    "stop_id": "8460B526101",
+    "stop_name": "Bóthar Chúil Each",
+    "stop_lat": 53.288132,
+    "stop_lon": -9.047988
+  },
+  {
+    "stop_id": "8460B5304201",
+    "stop_name": "Lios Caisil",
+    "stop_lat": 53.291057,
+    "stop_lon": -8.992892
+  },
+  {
+    "stop_id": "8460B530931",
+    "stop_name": "Bushypark",
+    "stop_lat": 53.295457,
+    "stop_lon": -9.09203
+  },
+  {
+    "stop_id": "8460B532241",
+    "stop_name": "Bushypark",
+    "stop_lat": 53.294503,
+    "stop_lon": -9.09025
+  },
+  {
+    "stop_id": "8460B5332601",
+    "stop_name": "Wellpark Retail Centre",
+    "stop_lat": 53.282755,
+    "stop_lon": -9.03286
+  },
+  {
+    "stop_id": "8460B5332901",
+    "stop_name": "Mervue",
+    "stop_lat": 53.285938,
+    "stop_lon": -9.017984
+  },
+  {
+    "stop_id": "8460B5346801",
+    "stop_name": "Rosshill East",
+    "stop_lat": 53.272015,
+    "stop_lon": -8.975149
+  },
+  {
+    "stop_id": "8460B551121",
+    "stop_name": "Rosshill East",
+    "stop_lat": 53.271972,
+    "stop_lon": -8.974998
+  },
+  {
+    "stop_id": "8460B551281",
+    "stop_name": "An Caisleán Gearr",
+    "stop_lat": 53.295427,
+    "stop_lon": -9.015014
+  },
+  {
+    "stop_id": "8460B5512901",
+    "stop_name": "An Caisleán Gearr",
+    "stop_lat": 53.295844,
+    "stop_lon": -9.014679
+  },
+  {
+    "stop_id": "8460B5550401",
+    "stop_name": "Galway Ceannt Station",
+    "stop_lat": 53.27395,
+    "stop_lon": -9.0474
+  },
+  {
+    "stop_id": "8460B555431",
+    "stop_name": "Galway Technology Park",
+    "stop_lat": 53.29922,
+    "stop_lon": -8.9872
+  },
+  {
+    "stop_id": "8460B555461",
+    "stop_name": "Medtronic",
+    "stop_lat": 53.301077,
+    "stop_lon": -8.992418
+  },
+  {
+    "stop_id": "8460B6355601",
+    "stop_name": "Galway Technology Park",
+    "stop_lat": 53.299025,
+    "stop_lon": -8.986866
+  },
+  {
+    "stop_id": "8460B8884201",
+    "stop_name": "Galway Clinic",
+    "stop_lat": 53.281961484782,
+    "stop_lon": -8.97330612233025
+  },
+  {
+    "stop_id": "8470B0533561",
+    "stop_name": "Leitir Mealláin",
+    "stop_lat": 53.242239,
+    "stop_lon": -9.731691
+  },
+  {
+    "stop_id": "8470B0533571",
+    "stop_name": "Leitir Mealláin",
+    "stop_lat": 53.242408,
+    "stop_lon": -9.731523
+  },
+  {
+    "stop_id": "8470B0533581",
+    "stop_name": "Bun an Charnáin",
+    "stop_lat": 53.247874,
+    "stop_lon": -9.659336
+  },
+  {
+    "stop_id": "8470B0533591",
+    "stop_name": "Bun an Charnáin",
+    "stop_lat": 53.247806,
+    "stop_lon": -9.659351
+  },
+  {
+    "stop_id": "8470B3504901",
+    "stop_name": "Corofin Cross",
+    "stop_lat": 53.4344885949792,
+    "stop_lon": -8.90418837361772
+  },
+  {
+    "stop_id": "8470B357911",
+    "stop_name": "Labane",
+    "stop_lat": 53.141245,
+    "stop_lon": -8.80466
+  },
+  {
+    "stop_id": "8470B357921",
+    "stop_name": "Labane",
+    "stop_lat": 53.141344,
+    "stop_lon": -8.804647
+  },
+  {
+    "stop_id": "8470B3579401",
+    "stop_name": "Kilcolgan",
+    "stop_lat": 53.20784,
+    "stop_lon": -8.86738
+  },
+  {
+    "stop_id": "8470B523221",
+    "stop_name": "Béal an Daingin",
+    "stop_lat": 53.313721,
+    "stop_lon": -9.616702
+  },
+  {
+    "stop_id": "8470B523261",
+    "stop_name": "Leitir Móir",
+    "stop_lat": 53.289088,
+    "stop_lon": -9.655806
+  },
+  {
+    "stop_id": "8470B5260101",
+    "stop_name": "Oranmore Centre",
+    "stop_lat": 53.266563,
+    "stop_lon": -8.929813
+  },
+  {
+    "stop_id": "8470B530001",
+    "stop_name": "Curry Oughter",
+    "stop_lat": 53.439012,
+    "stop_lon": -8.871082
+  },
+  {
+    "stop_id": "8470B530011",
+    "stop_name": "Raidió na Gaeltachta",
+    "stop_lat": 53.289291,
+    "stop_lon": -9.555976
+  },
+  {
+    "stop_id": "8470B530031",
+    "stop_name": "Raidió na Gaeltachta",
+    "stop_lat": 53.289325,
+    "stop_lon": -9.556112
+  },
+  {
+    "stop_id": "8470B530051",
+    "stop_name": "Corofin Cross",
+    "stop_lat": 53.43448836717,
+    "stop_lon": -8.90421846798292
+  },
+  {
+    "stop_id": "8470B530171",
+    "stop_name": "Corrandrum",
+    "stop_lat": 53.410922,
+    "stop_lon": -8.909239
+  },
+  {
+    "stop_id": "8470B530181",
+    "stop_name": "Leacht Seoirse",
+    "stop_lat": 53.356314,
+    "stop_lon": -8.931586
+  },
+  {
+    "stop_id": "8470B530261",
+    "stop_name": "Ballynastuckaun",
+    "stop_lat": 53.449813,
+    "stop_lon": -8.817963
+  },
+  {
+    "stop_id": "8470B530291",
+    "stop_name": "Ballynastuckaun",
+    "stop_lat": 53.449849,
+    "stop_lon": -8.817918
+  },
+  {
+    "stop_id": "8470B530311",
+    "stop_name": "Baile Chláir",
+    "stop_lat": 53.34374,
+    "stop_lon": -8.943115
+  },
+  {
+    "stop_id": "8470B530331",
+    "stop_name": "An Chreig Bhuí",
+    "stop_lat": 53.332541,
+    "stop_lon": -8.960149
+  },
+  {
+    "stop_id": "8470B530351",
+    "stop_name": "An Cillín",
+    "stop_lat": 53.31311,
+    "stop_lon": -8.98643
+  },
+  {
+    "stop_id": "8470B530361",
+    "stop_name": "Coolagh",
+    "stop_lat": 53.292254,
+    "stop_lon": -8.984055
+  },
+  {
+    "stop_id": "8470B530711",
+    "stop_name": "Bearna",
+    "stop_lat": 53.25163,
+    "stop_lon": -9.1486
+  },
+  {
+    "stop_id": "8470B530731",
+    "stop_name": "Béal an Daingin",
+    "stop_lat": 53.313721,
+    "stop_lon": -9.616702
+  },
+  {
+    "stop_id": "8470B530891",
+    "stop_name": "Letterfore",
+    "stop_lat": 53.437079,
+    "stop_lon": -9.44278
+  },
+  {
+    "stop_id": "8470B530941",
+    "stop_name": "Na Tuairíní",
+    "stop_lat": 53.31609,
+    "stop_lon": -9.15221
+  },
+  {
+    "stop_id": "8470B530951",
+    "stop_name": "Droimnín",
+    "stop_lat": 53.35576,
+    "stop_lon": -9.20752
+  },
+  {
+    "stop_id": "8470B530961",
+    "stop_name": "Caher",
+    "stop_lat": 53.465256,
+    "stop_lon": -9.695248
+  },
+  {
+    "stop_id": "8470B530971",
+    "stop_name": "Rushveala",
+    "stop_lat": 53.42082,
+    "stop_lon": -9.29658
+  },
+  {
+    "stop_id": "8470B530981",
+    "stop_name": "Rushveala",
+    "stop_lat": 53.42087,
+    "stop_lon": -9.29644
+  },
+  {
+    "stop_id": "8470B531001",
+    "stop_name": "Ballinafad",
+    "stop_lat": 53.463442,
+    "stop_lon": -9.803196
+  },
+  {
+    "stop_id": "8470B531051",
+    "stop_name": "Carna",
+    "stop_lat": 53.32426,
+    "stop_lon": -9.83712
+  },
+  {
+    "stop_id": "8470B531061",
+    "stop_name": "Carna",
+    "stop_lat": 53.324238,
+    "stop_lon": -9.836443
+  },
+  {
+    "stop_id": "8470B531101",
+    "stop_name": "Carraghy",
+    "stop_lat": 53.389559,
+    "stop_lon": -8.915143
+  },
+  {
+    "stop_id": "8470B531111",
+    "stop_name": "Carraghy",
+    "stop_lat": 53.389163,
+    "stop_lon": -8.91527
+  },
+  {
+    "stop_id": "8470B531131",
+    "stop_name": "Gortnagroagh",
+    "stop_lat": 53.39599,
+    "stop_lon": -9.25576
+  },
+  {
+    "stop_id": "8470B531161",
+    "stop_name": "Doon",
+    "stop_lat": 53.38035,
+    "stop_lon": -9.24981
+  },
+  {
+    "stop_id": "8470B531171",
+    "stop_name": "Droimnín",
+    "stop_lat": 53.35577,
+    "stop_lon": -9.20728
+  },
+  {
+    "stop_id": "8470B531181",
+    "stop_name": "Maigh Cuilinn",
+    "stop_lat": 53.338389,
+    "stop_lon": -9.180824
+  },
+  {
+    "stop_id": "8470B531281",
+    "stop_name": "Scríb",
+    "stop_lat": 53.385174,
+    "stop_lon": -9.553141
+  },
+  {
+    "stop_id": "8470B531651",
+    "stop_name": "Ogúil",
+    "stop_lat": 53.32728,
+    "stop_lon": -9.16822
+  },
+  {
+    "stop_id": "8470B531731",
+    "stop_name": "Curry Oughter",
+    "stop_lat": 53.439105,
+    "stop_lon": -8.871911
+  },
+  {
+    "stop_id": "8470B531791",
+    "stop_name": "Casla",
+    "stop_lat": 53.287751,
+    "stop_lon": -9.5486
+  },
+  {
+    "stop_id": "8470B5318401",
+    "stop_name": "An Chreig Bhuí",
+    "stop_lat": 53.331614,
+    "stop_lon": -8.962088
+  },
+  {
+    "stop_id": "8470B531981",
+    "stop_name": "Corrandrum",
+    "stop_lat": 53.4102,
+    "stop_lon": -8.909599
+  },
+  {
+    "stop_id": "8470B532121",
+    "stop_name": "Derrylea",
+    "stop_lat": 53.483598,
+    "stop_lon": -9.958145
+  },
+  {
+    "stop_id": "8470B532141",
+    "stop_name": "Doire Iorrais",
+    "stop_lat": 53.390097,
+    "stop_lon": -9.656341
+  },
+  {
+    "stop_id": "8470B532151",
+    "stop_name": "Doire Iorrais",
+    "stop_lat": 53.390116,
+    "stop_lon": -9.656251
+  },
+  {
+    "stop_id": "8470B532211",
+    "stop_name": "Ogúil",
+    "stop_lat": 53.32731,
+    "stop_lon": -9.16802
+  },
+  {
+    "stop_id": "8470B532231",
+    "stop_name": "Na Tuairíní",
+    "stop_lat": 53.31595,
+    "stop_lon": -9.15156
+  },
+  {
+    "stop_id": "8470B532461",
+    "stop_name": "Oughterard",
+    "stop_lat": 53.42819,
+    "stop_lon": -9.32233
+  },
+  {
+    "stop_id": "8470B532601",
+    "stop_name": "Droichead na bhForbach",
+    "stop_lat": 53.250411,
+    "stop_lon": -9.224416
+  },
+  {
+    "stop_id": "8470B5327201",
+    "stop_name": "Glengowla",
+    "stop_lat": 53.423799,
+    "stop_lon": -9.378532
+  },
+  {
+    "stop_id": "8470B532761",
+    "stop_name": "An Gort Mór",
+    "stop_lat": 53.387214,
+    "stop_lon": -9.612209
+  },
+  {
+    "stop_id": "8470B532791",
+    "stop_name": "An Gort Mór",
+    "stop_lat": 53.386702,
+    "stop_lon": -9.611498
+  },
+  {
+    "stop_id": "8470B532951",
+    "stop_name": "Casla",
+    "stop_lat": 53.288181,
+    "stop_lon": -9.548721
+  },
+  {
+    "stop_id": "8470B532971",
+    "stop_name": "Camas",
+    "stop_lat": 53.349006,
+    "stop_lon": -9.542829
+  },
+  {
+    "stop_id": "8470B532981",
+    "stop_name": "An Cnoc",
+    "stop_lat": 53.245987,
+    "stop_lon": -9.363685
+  },
+  {
+    "stop_id": "8470B532991",
+    "stop_name": "Camas",
+    "stop_lat": 53.348359,
+    "stop_lon": -9.54288
+  },
+  {
+    "stop_id": "8470B533011",
+    "stop_name": "Ros an Mhíl",
+    "stop_lat": 53.267911,
+    "stop_lon": -9.554375
+  },
+  {
+    "stop_id": "8470B5330401",
+    "stop_name": "Ros an Mhíl",
+    "stop_lat": 53.268145,
+    "stop_lon": -9.554383
+  },
+  {
+    "stop_id": "8470B533051",
+    "stop_name": "Na Doiriú Theas",
+    "stop_lat": 53.27757,
+    "stop_lon": -9.530987
+  },
+  {
+    "stop_id": "8470B533091",
+    "stop_name": "Cill Chiaráin",
+    "stop_lat": 53.323223,
+    "stop_lon": -9.73678
+  },
+  {
+    "stop_id": "8470B533101",
+    "stop_name": "Cill Chiaráin",
+    "stop_lat": 53.323072,
+    "stop_lon": -9.736683
+  },
+  {
+    "stop_id": "8470B533111",
+    "stop_name": "Derrylea",
+    "stop_lat": 53.483742,
+    "stop_lon": -9.957579
+  },
+  {
+    "stop_id": "8470B533121",
+    "stop_name": "Ballinafad",
+    "stop_lat": 53.46344,
+    "stop_lon": -9.80302
+  },
+  {
+    "stop_id": "8470B533131",
+    "stop_name": "Sraith Salach",
+    "stop_lat": 53.467058,
+    "stop_lon": -9.739333
+  },
+  {
+    "stop_id": "8470B533141",
+    "stop_name": "Caher",
+    "stop_lat": 53.465281,
+    "stop_lon": -9.69537
+  },
+  {
+    "stop_id": "8470B533151",
+    "stop_name": "Maam Cross",
+    "stop_lat": 53.45584,
+    "stop_lon": -9.53763
+  },
+  {
+    "stop_id": "8470B533161",
+    "stop_name": "Letterfore",
+    "stop_lat": 53.436941,
+    "stop_lon": -9.442308
+  },
+  {
+    "stop_id": "8470B533191",
+    "stop_name": "Glengowla",
+    "stop_lat": 53.423679,
+    "stop_lon": -9.378844
+  },
+  {
+    "stop_id": "8470B533521",
+    "stop_name": "Leitir Móir",
+    "stop_lat": 53.289475,
+    "stop_lon": -9.655086
+  },
+  {
+    "stop_id": "8470B533631",
+    "stop_name": "Leacht Seoirse",
+    "stop_lat": 53.356811,
+    "stop_lon": -8.931266
+  },
+  {
+    "stop_id": "8470B533691",
+    "stop_name": "Maam Cross",
+    "stop_lat": 53.45572,
+    "stop_lon": -9.53836
+  },
+  {
+    "stop_id": "8470B5337701",
+    "stop_name": "An Cillín",
+    "stop_lat": 53.313479,
+    "stop_lon": -8.98648
+  },
+  {
+    "stop_id": "8470B5341101",
+    "stop_name": "Newbridge",
+    "stop_lat": 53.508584573992,
+    "stop_lon": -8.42923996498947
+  },
+  {
+    "stop_id": "8470B534161",
+    "stop_name": "Clashard",
+    "stop_lat": 53.441772,
+    "stop_lon": -8.727331
+  },
+  {
+    "stop_id": "8470B534171",
+    "stop_name": "Newbridge",
+    "stop_lat": 53.5087023174192,
+    "stop_lon": -8.4289848718595
+  },
+  {
+    "stop_id": "8470B5343401",
+    "stop_name": "Oughterard",
+    "stop_lat": 53.42812,
+    "stop_lon": -9.32212
+  },
+  {
+    "stop_id": "8470B534651",
+    "stop_name": "Gortnagroagh",
+    "stop_lat": 53.39591,
+    "stop_lon": -9.25593
+  },
+  {
+    "stop_id": "8470B534661",
+    "stop_name": "Na Doiriú Theas",
+    "stop_lat": 53.277218,
+    "stop_lon": -9.531155
+  },
+  {
+    "stop_id": "8470B534741",
+    "stop_name": "Scríb",
+    "stop_lat": 53.384316,
+    "stop_lon": -9.55559
+  },
+  {
+    "stop_id": "8470B5349001",
+    "stop_name": "An Spidéal",
+    "stop_lat": 53.244086,
+    "stop_lon": -9.306313
+  },
+  {
+    "stop_id": "8470B535131",
+    "stop_name": "Doon",
+    "stop_lat": 53.37905,
+    "stop_lon": -9.24977
+  },
+  {
+    "stop_id": "8470B535201",
+    "stop_name": "Bearna",
+    "stop_lat": 53.251758,
+    "stop_lon": -9.148641
+  },
+  {
+    "stop_id": "8470B535211",
+    "stop_name": "Na Forbacha",
+    "stop_lat": 53.24953,
+    "stop_lon": -9.20099
+  },
+  {
+    "stop_id": "8470B535221",
+    "stop_name": "An Spidéal",
+    "stop_lat": 53.244099,
+    "stop_lon": -9.308366
+  },
+  {
+    "stop_id": "8470B535231",
+    "stop_name": "An Cnoc",
+    "stop_lat": 53.246024,
+    "stop_lon": -9.363581
+  },
+  {
+    "stop_id": "8470B535241",
+    "stop_name": "Baile na hAbhann",
+    "stop_lat": 53.241433,
+    "stop_lon": -9.502489
+  },
+  {
+    "stop_id": "8470B5352501",
+    "stop_name": "Baile na hAbhann",
+    "stop_lat": 53.24114,
+    "stop_lon": -9.502223
+  },
+  {
+    "stop_id": "8470B535321",
+    "stop_name": "An Cheathrú Rua",
+    "stop_lat": 53.263918,
+    "stop_lon": -9.598737
+  },
+  {
+    "stop_id": "8470B535331",
+    "stop_name": "Loch Leacrach",
+    "stop_lat": 53.300902,
+    "stop_lon": -9.577943
+  },
+  {
+    "stop_id": "8470B535341",
+    "stop_name": "Loch Leacrach",
+    "stop_lat": 53.300911,
+    "stop_lon": -9.577958
+  },
+  {
+    "stop_id": "8470B543101",
+    "stop_name": "Clashard",
+    "stop_lat": 53.44171,
+    "stop_lon": -8.727179
+  },
+  {
+    "stop_id": "8470B550011",
+    "stop_name": "Abbeyknockmoy",
+    "stop_lat": 53.436983,
+    "stop_lon": -8.748936
+  },
+  {
+    "stop_id": "8470B550171",
+    "stop_name": "Bleannagloos",
+    "stop_lat": 53.512052,
+    "stop_lon": -8.387483
+  },
+  {
+    "stop_id": "8470B550181",
+    "stop_name": "Bleannagloos",
+    "stop_lat": 53.511774,
+    "stop_lon": -8.387435
+  },
+  {
+    "stop_id": "8470B550251",
+    "stop_name": "Cooloo Mountain",
+    "stop_lat": 53.470183,
+    "stop_lon": -8.642008
+  },
+  {
+    "stop_id": "8470B550301",
+    "stop_name": "Derreen",
+    "stop_lat": 53.452137,
+    "stop_lon": -8.69964
+  },
+  {
+    "stop_id": "8470B550311",
+    "stop_name": "Ballinlass",
+    "stop_lat": 53.495039,
+    "stop_lon": -8.472672
+  },
+  {
+    "stop_id": "8470B550331",
+    "stop_name": "Ballinlass",
+    "stop_lat": 53.495147,
+    "stop_lon": -8.472779
+  },
+  {
+    "stop_id": "8470B550401",
+    "stop_name": "Ballygar",
+    "stop_lat": 53.523243,
+    "stop_lon": -8.323145
+  },
+  {
+    "stop_id": "8470B550441",
+    "stop_name": "Abbeyknockmoy",
+    "stop_lat": 53.436983,
+    "stop_lon": -8.748936
+  },
+  {
+    "stop_id": "8470B550451",
+    "stop_name": "Ballyglunin",
+    "stop_lat": 53.420347,
+    "stop_lon": -8.790829
+  },
+  {
+    "stop_id": "8470B550471",
+    "stop_name": "Ballygar",
+    "stop_lat": 53.522689,
+    "stop_lon": -8.325388
+  },
+  {
+    "stop_id": "8470B550491",
+    "stop_name": "Ballyglunin",
+    "stop_lat": 53.420437,
+    "stop_lon": -8.790921
+  },
+  {
+    "stop_id": "8470B550821",
+    "stop_name": "Ballybrone",
+    "stop_lat": 53.398996,
+    "stop_lon": -8.832882
+  },
+  {
+    "stop_id": "8470B550881",
+    "stop_name": "Ballybrone",
+    "stop_lat": 53.398996,
+    "stop_lon": -8.832882
+  },
+  {
+    "stop_id": "8470B551111",
+    "stop_name": "Tonroe Cross",
+    "stop_lat": 53.241548,
+    "stop_lon": -8.891382
+  },
+  {
+    "stop_id": "8470B551221",
+    "stop_name": "Turloughmore",
+    "stop_lat": 53.382379,
+    "stop_lon": -8.85321
+  },
+  {
+    "stop_id": "8470B551411",
+    "stop_name": "Baile Chláir",
+    "stop_lat": 53.344272,
+    "stop_lon": -8.942917
+  },
+  {
+    "stop_id": "8470B552081",
+    "stop_name": "Cooloo Mountain",
+    "stop_lat": 53.470353,
+    "stop_lon": -8.642221
+  },
+  {
+    "stop_id": "8470B552091",
+    "stop_name": "Derreen",
+    "stop_lat": 53.452208,
+    "stop_lon": -8.699776
+  },
+  {
+    "stop_id": "8470B5521801",
+    "stop_name": "Coolagh",
+    "stop_lat": 53.292198,
+    "stop_lon": -8.984264
+  },
+  {
+    "stop_id": "8470B552431",
+    "stop_name": "Briarfield",
+    "stop_lat": 53.465869,
+    "stop_lon": -8.666747
+  },
+  {
+    "stop_id": "8470B552971",
+    "stop_name": "Briarfield",
+    "stop_lat": 53.465927,
+    "stop_lon": -8.666041
+  },
+  {
+    "stop_id": "8470B553241",
+    "stop_name": "Kiltartan",
+    "stop_lat": 53.098051,
+    "stop_lon": -8.815277
+  },
+  {
+    "stop_id": "8470B553271",
+    "stop_name": "Corker",
+    "stop_lat": 53.105818,
+    "stop_lon": -8.806986
+  },
+  {
+    "stop_id": "8470B553411",
+    "stop_name": "Lackagh",
+    "stop_lat": 53.369112,
+    "stop_lon": -8.894028
+  },
+  {
+    "stop_id": "8470B553431",
+    "stop_name": "Lackagh",
+    "stop_lat": 53.369183,
+    "stop_lon": -8.894165
+  },
+  {
+    "stop_id": "8470B554031",
+    "stop_name": "Maigh Cuilinn",
+    "stop_lat": 53.338487,
+    "stop_lon": -9.181235
+  },
+  {
+    "stop_id": "8470B554541",
+    "stop_name": "Sraith Salach",
+    "stop_lat": 53.46697,
+    "stop_lon": -9.73935
+  },
+  {
+    "stop_id": "8470B555161",
+    "stop_name": "Tonroe Cross",
+    "stop_lat": 53.241832,
+    "stop_lon": -8.891792
+  },
+  {
+    "stop_id": "8470B555271",
+    "stop_name": "Turloughmore",
+    "stop_lat": 53.382432,
+    "stop_lon": -8.853362
+  },
+  {
+    "stop_id": "8470B555521",
+    "stop_name": "Laughil",
+    "stop_lat": 53.486937,
+    "stop_lon": -8.583722
+  },
+  {
+    "stop_id": "8470B556011",
+    "stop_name": "Mountbellew",
+    "stop_lat": 53.47036,
+    "stop_lon": -8.50078
+  },
+  {
+    "stop_id": "8470B5560401",
+    "stop_name": "Moylough",
+    "stop_lat": 53.4879761052969,
+    "stop_lon": -8.56759858853945
+  },
+  {
+    "stop_id": "8470B5560901",
+    "stop_name": "Oranmore North",
+    "stop_lat": 53.272763,
+    "stop_lon": -8.928809
+  },
+  {
+    "stop_id": "8470B556111",
+    "stop_name": "Mountbellew",
+    "stop_lat": 53.470193,
+    "stop_lon": -8.500878
+  },
+  {
+    "stop_id": "8470B556161",
+    "stop_name": "Oranmore North",
+    "stop_lat": 53.272747,
+    "stop_lon": -8.928538
+  },
+  {
+    "stop_id": "8470B577651",
+    "stop_name": "Kilcolgan",
+    "stop_lat": 53.21103,
+    "stop_lon": -8.87026
+  },
+  {
+    "stop_id": "8470B577661",
+    "stop_name": "Clarinbridge",
+    "stop_lat": 53.22899,
+    "stop_lon": -8.88058
+  },
+  {
+    "stop_id": "8470B6311301",
+    "stop_name": "Clarinbridge",
+    "stop_lat": 53.22862,
+    "stop_lon": -8.88077
+  },
+  {
+    "stop_id": "8470B6311701",
+    "stop_name": "An Cheathrú Rua",
+    "stop_lat": 53.26381,
+    "stop_lon": -9.59881
+  },
+  {
+    "stop_id": "8470B6312201",
+    "stop_name": "Ardrahan",
+    "stop_lat": 53.156702,
+    "stop_lon": -8.806175
+  },
+  {
+    "stop_id": "8470B6353501",
+    "stop_name": "Gort",
+    "stop_lat": 53.067195,
+    "stop_lon": -8.819379
+  },
+  {
+    "stop_id": "8470B635401",
+    "stop_name": "Clifden",
+    "stop_lat": 53.48751,
+    "stop_lon": -10.02047
+  },
+  {
+    "stop_id": "8470B635461",
+    "stop_name": "Gort",
+    "stop_lat": 53.06714,
+    "stop_lon": -8.81909
+  },
+  {
+    "stop_id": "8470BB555621",
+    "stop_name": "Ardrahan",
+    "stop_lat": 53.156702,
+    "stop_lon": -8.806175
+  },
+  {
+    "stop_id": "8500B530121",
+    "stop_name": "Athleague",
+    "stop_lat": 53.567699,
+    "stop_lon": -8.25703
+  },
+  {
+    "stop_id": "8500B530341",
+    "stop_name": "Athleague",
+    "stop_lat": 53.567609,
+    "stop_lon": -8.256924
+  },
+  {
+    "stop_id": "8500B550711",
+    "stop_name": "Beechwood",
+    "stop_lat": 53.658266,
+    "stop_lon": -8.088003
+  },
+  {
+    "stop_id": "8500B550741",
+    "stop_name": "Beechwood",
+    "stop_lat": 53.658311,
+    "stop_lon": -8.088094
+  },
+  {
+    "stop_id": "8500B551631",
+    "stop_name": "Cloonaddra",
+    "stop_lat": 53.669811,
+    "stop_lon": -8.043613
+  },
+  {
+    "stop_id": "8500B551661",
+    "stop_name": "Cloonaddra",
+    "stop_lat": 53.669721,
+    "stop_lon": -8.043537
+  },
+  {
+    "stop_id": "8500B551701",
+    "stop_name": "Ballinagard",
+    "stop_lat": 53.611138,
+    "stop_lon": -8.201833
+  },
+  {
+    "stop_id": "8500B551721",
+    "stop_name": "Ballinagard",
+    "stop_lat": 53.610734,
+    "stop_lon": -8.201816
+  },
+  {
+    "stop_id": "8500B552411",
+    "stop_name": "Emmoo",
+    "stop_lat": 53.646027,
+    "stop_lon": -8.136043
+  },
+  {
+    "stop_id": "8500B552421",
+    "stop_name": "Emmoo",
+    "stop_lat": 53.645856,
+    "stop_lon": -8.135785
+  },
+  {
+    "stop_id": "8500B553971",
+    "stop_name": "Mount Talbot",
+    "stop_lat": 53.528395,
+    "stop_lon": -8.283292
+  },
+  {
+    "stop_id": "8500B553991",
+    "stop_name": "Mount Talbot",
+    "stop_lat": 53.528349,
+    "stop_lon": -8.283457
+  },
+  {
+    "stop_id": "8500B555311",
+    "stop_name": "Moneen",
+    "stop_lat": 53.6657878137677,
+    "stop_lon": -8.05867933767838
+  },
+  {
+    "stop_id": "8500B555341",
+    "stop_name": "Moneen",
+    "stop_lat": 53.665788,
+    "stop_lon": -8.058755
+  },
+  {
+    "stop_id": "8500B555751",
+    "stop_name": "Roscommon",
+    "stop_lat": 53.632107,
+    "stop_lon": -8.188018
+  }
+]

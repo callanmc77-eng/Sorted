@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input-base {
+    @apply bg-white border border-slate-200 rounded-lg px-3 py-2 text-sm text-navy w-full
+           focus:outline-none focus:ring-2 focus:ring-navy/20 focus:border-navy/40;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-navy font-sans;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  /* Native date/time inputs — remove default browser chrome on Webkit */
+  input[type='date']::-webkit-calendar-picker-indicator,
+  input[type='time']::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
