@@ -23,7 +23,7 @@ export function useGoogleMaps(): { isLoaded: boolean; error: string | null } {
 
     const script = document.createElement('script')
     script.id = 'google-maps-script'
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places,marker,routes&loading=async&callback=__googleMapsReady`
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places,marker&loading=async&callback=__googleMapsReady`
     script.async = true
     script.defer = true
 
