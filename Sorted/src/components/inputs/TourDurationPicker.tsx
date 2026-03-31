@@ -1,43 +1,39 @@
 import { useBookingStore } from '@/store/bookingStore'
 import type { TourDuration } from '@/types/itinerary'
 
-const OPTIONS: { value: TourDuration; label: string }[] = [
-  { value: 'half', label: 'Half day' },
-  { value: 'full', label: 'Full day' },
-  { value: 'custom', label: 'Custom' },
+const OPTIONS: { value: TourDuration; label: string; hint: string }[] = [
+  { value: 'full', label: 'Full day', hint: 'Ends by 18:00' },
+  { value: 'half', label: 'Half day', hint: 'Ends by 13:00' },
+  { value: 'custom', label: 'Custom', hint: 'Set end time' },
 ]
 
 export function TourDurationPicker() {
   const { tourDuration, endTime, setTourDuration, setEndTime } = useBookingStore()
 
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1.5">
       <span className="text-xs text-navy-muted font-medium">Tour length</span>
 
-      <div className="flex rounded-lg border border-slate-200 bg-slate-50 p-0.5 gap-0.5">
+      <div className="flex flex-col gap-1">
         {OPTIONS.map((opt) => (
           <button
             key={opt.value}
             type="button"
             onClick={() => setTourDuration(opt.value)}
-            className={`flex-1 py-2 rounded-md text-xs font-medium transition-colors
+            className={`flex items-center justify-between px-3 py-2 rounded-lg border text-left transition-colors
               ${tourDuration === opt.value
-                ? 'bg-white text-navy shadow-sm border border-slate-200'
-                : 'text-navy-muted hover:text-navy'
+                ? 'bg-navy text-white border-navy'
+                : 'bg-white text-navy border-slate-200 hover:border-slate-300'
               }`}
           >
-            {opt.label}
+            <span className="text-xs font-medium">{opt.label}</span>
+            <span className={`text-xs ${tourDuration === opt.value ? 'text-white/70' : 'text-navy-muted'}`}>
+              {opt.hint}
+            </span>
           </button>
         ))}
       </div>
 
-      {/* Show end-time hint for half/full, or editable input for custom */}
-      {tourDuration === 'half' && (
-        <p className="text-xs text-slate-400">Ends by 13:00</p>
-      )}
-      {tourDuration === 'full' && (
-        <p className="text-xs text-slate-400">Ends by 18:00</p>
-      )}
       {tourDuration === 'custom' && (
         <div className="flex items-center gap-2 mt-0.5">
           <span className="text-xs text-navy-muted">End by</span>

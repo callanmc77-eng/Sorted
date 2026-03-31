@@ -10,7 +10,6 @@ const GEOCODE_TIMEOUT_MS = 10_000
 export function useRouteBuilder(isLoaded: boolean) {
   const {
     date,
-    pax: _pax,
     startTime,
     startLocation,
     transportMode,

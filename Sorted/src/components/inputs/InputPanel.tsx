@@ -12,8 +12,8 @@ interface Props {
 }
 
 export function InputPanel({ isLoaded }: Props) {
-  const { date, pax, startTime, startLocation, transportMode,
-          setDate, setPax, setStartTime, setStartLocation, setTransportMode } = useBookingStore()
+  const { date, startTime, startLocation, transportMode,
+          setDate, setStartTime, setStartLocation, setTransportMode } = useBookingStore()
 
   return (
     <div className="flex flex-col gap-5">
@@ -22,12 +22,10 @@ export function InputPanel({ isLoaded }: Props) {
       </h2>
 
       <DatePicker value={date} onChange={setDate} />
-      <PaxInput value={pax} onChange={setPax} />
+      <PaxInput />
 
-      <div className="grid grid-cols-2 gap-3">
-        <StartTimePicker value={startTime} onChange={setStartTime} />
-        <TourDurationPicker />
-      </div>
+      <StartTimePicker value={startTime} onChange={setStartTime} />
+      <TourDurationPicker />
 
       <StartLocationInput value={startLocation} onChange={setStartLocation} isLoaded={isLoaded} />
       <TransportToggle value={transportMode} onChange={setTransportMode} />

@@ -5,7 +5,7 @@ import { TOUR_END_TIMES } from '@/types/itinerary'
 interface BookingState extends BookingInputs {
   bufferMins: number
   tourDuration: TourDuration
-  endTime: string            // "HH:MM" — the cap time for the tour
+  endTime: string
   includeLunch: boolean
   lunchDurationMins: number
   routeResult: RouteResult | null
@@ -14,7 +14,8 @@ interface BookingState extends BookingInputs {
 
   setCity: (cityId: string) => void
   setDate: (date: string) => void
-  setPax: (pax: number) => void
+  setAdults: (n: number) => void
+  setChildren: (n: number) => void
   setStartTime: (time: string) => void
   setStartLocation: (location: string) => void
   setTransportMode: (mode: TransportMode) => void
@@ -32,8 +33,9 @@ interface BookingState extends BookingInputs {
 export const useBookingStore = create<BookingState>()((set) => ({
   cityId: 'dublin',
   date: '',
-  pax: 2,
-  startTime: '09:00',
+  adults: 2,
+  children: 0,
+  startTime: '10:00',
   startLocation: '',
   transportMode: 'DRIVING',
   selectedVenueIds: [],
@@ -48,7 +50,8 @@ export const useBookingStore = create<BookingState>()((set) => ({
 
   setCity: (cityId) => set({ cityId }),
   setDate: (date) => set({ date, routeResult: null }),
-  setPax: (pax) => set({ pax }),
+  setAdults: (adults) => set({ adults }),
+  setChildren: (children) => set({ children }),
   setStartTime: (startTime) => set({ startTime, routeResult: null }),
   setStartLocation: (startLocation) => set({ startLocation, routeResult: null }),
   setTransportMode: (transportMode) => set({ transportMode, routeResult: null }),

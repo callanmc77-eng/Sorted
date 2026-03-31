@@ -13,8 +13,9 @@ export const TOUR_END_TIMES: Record<Exclude<TourDuration, 'custom'>, string> = {
 export interface BookingInputs {
   cityId: string
   date: string          // "YYYY-MM-DD"
-  pax: number
-  startTime: string     // "09:00"
+  adults: number
+  children: number
+  startTime: string     // "10:00"
   startLocation: string
   transportMode: TransportMode
   selectedVenueIds: string[]

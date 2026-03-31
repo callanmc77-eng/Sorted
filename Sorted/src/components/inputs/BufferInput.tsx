@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useBookingStore } from '@/store/bookingStore'
 
-const PRESETS = [0, 10, 15, 20, 30]
+const PRESETS = [0, 5, 10, 15]
 
 export function BufferInput() {
   const { bufferMins, setBufferMins } = useBookingStore()

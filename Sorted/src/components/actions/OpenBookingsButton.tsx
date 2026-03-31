@@ -7,7 +7,8 @@ interface Props {
 }
 
 export function OpenBookingsButton({ result }: Props) {
-  const { date, pax } = useBookingStore()
+  const { date, adults, children } = useBookingStore()
+  const pax = adults + children
 
   const feasibleStops = result.stops.filter(
     (s): s is ScheduledStop => s.feasible && !('isLunch' in s),
@@ -29,7 +30,9 @@ export function OpenBookingsButton({ result }: Props) {
     <div className="flex flex-col gap-3">
       <div className="flex items-center justify-between">
         <h3 className="text-xs font-semibold text-navy-muted uppercase tracking-wider">Booking links</h3>
-        <span className="text-xs text-slate-400">{pax} guest{pax !== 1 ? 's' : ''} · {dateFormatted}</span>
+        <span className="text-xs text-slate-400">
+          {adults > 0 && `${adults}A`}{adults > 0 && children > 0 && ' · '}{children > 0 && `${children}C`} · {dateFormatted}
+        </span>
       </div>
 
       <p className="text-xs text-slate-400 -mt-1">
