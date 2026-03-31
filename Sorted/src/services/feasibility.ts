@@ -16,15 +16,15 @@ export interface FeasibilityResult {
  */
 function nextSlot(venue: Venue, arrivalMins: number, openMins: number, lastEntryMins: number): number | null {
   if (venue.slotType === 'continuous') {
-    // Any time between open and last entry is fine
-    return arrivalMins >= openMins && arrivalMins <= lastEntryMins ? arrivalMins : null
+    // Arrive before open → wait until open (as long as open <= lastEntry)
+    const effectiveArrival = Math.max(arrivalMins, openMins)
+    return effectiveArrival <= lastEntryMins ? effectiveArrival : null
   }
 
   if (venue.slotType === 'interval' && venue.slotIntervalMins) {
     const interval = venue.slotIntervalMins
-    // Slots start at openMins and repeat every interval minutes
-    // Find first slot >= arrivalMins
-    const offsetFromOpen = arrivalMins - openMins
+    const effectiveArrival = Math.max(arrivalMins, openMins)
+    const offsetFromOpen = effectiveArrival - openMins
     const slotsElapsed = offsetFromOpen <= 0 ? 0 : Math.ceil(offsetFromOpen / interval)
     const candidateMins = openMins + slotsElapsed * interval
     return candidateMins <= lastEntryMins ? candidateMins : null
@@ -41,7 +41,8 @@ function nextSlot(venue: Venue, arrivalMins: number, openMins: number, lastEntry
   }
 
   // Fallback: treat as continuous
-  return arrivalMins <= lastEntryMins ? arrivalMins : null
+  const effectiveArrival = Math.max(arrivalMins, openMins)
+  return effectiveArrival <= lastEntryMins ? effectiveArrival : null
 }
 
 export function checkVenueFeasibility(
@@ -82,10 +83,6 @@ export function checkVenueFeasibility(
       feasible: false,
       reason: `${venue.name}: no available entry slot after arriving at ${formatTime(arrivalMins)} — ${slotDesc}.`,
     }
-  }
-
-  if (arrivalMins < openMins && slot > arrivalMins) {
-    // Group arrives before opening — they wait, which is fine as long as the slot fits
   }
 
   const waitMins = slot - arrivalMins
