@@ -54,15 +54,35 @@ export function VenueEditModal({ venue, onClose }: Props) {
     }))
   }
 
+  function normaliseTime(val: string): string {
+    // Browser may return 12h format on some locales — force to HH:MM 24h
+    if (!val) return val
+    // Already HH:MM
+    if (/^\d{2}:\d{2}$/.test(val)) return val
+    // Try parsing via Date
+    const d = new Date(`1970-01-01T${val}`)
+    if (!isNaN(d.getTime())) {
+      return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`
+    }
+    return val
+  }
+
   function handleSave(e: React.FormEvent) {
     e.preventDefault()
+    const normalisedHours: WeeklyHours = Object.fromEntries(
+      Object.entries(hours).map(([day, h]) => [
+        day,
+        h.closed ? h : { ...h, open: normaliseTime(h.open), close: normaliseTime(h.close) },
+      ])
+    ) as WeeklyHours
+
     const data: Venue = {
       id: venue?.id ?? name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
       name,
       address,
       coordinates: { lat: parseFloat(lat), lng: parseFloat(lng) },
-      openingHours: hours,
-      lastEntry,
+      openingHours: normalisedHours,
+      lastEntry: normaliseTime(lastEntry),
       avgVisitDurationMins: parseInt(duration, 10),
       bookingUrl,
       bookingSystem,
