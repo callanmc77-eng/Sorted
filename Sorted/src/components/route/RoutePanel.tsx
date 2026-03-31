@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import type { RouteResult, ScheduledStop, RouteStop } from '@/types/itinerary'
 import { RouteStep, LunchStepCard, DragHandle } from './RouteStep'
 import { FeasibilityBanner } from './FeasibilityBanner'
@@ -20,6 +20,39 @@ export function RoutePanel({ result }: Props) {
 
   const dragIndexRef = useRef<number | null>(null)
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null)
+  const scrollElRef = useRef<HTMLElement | null>(null)
+  const scrollRafRef = useRef<number | null>(null)
+  const dragYRef = useRef(0)
+
+  // Auto-scroll while dragging near the edges of the right panel
+  function startAutoScroll(el: HTMLElement) {
+    scrollElRef.current = el
+    function tick() {
+      const container = scrollElRef.current
+      if (!container || dragIndexRef.current === null) return
+      const rect = container.getBoundingClientRect()
+      const y = dragYRef.current
+      const ZONE = 80
+      const SPEED = 8
+      if (y < rect.top + ZONE && y > rect.top) {
+        container.scrollTop -= SPEED * (1 - (y - rect.top) / ZONE)
+      } else if (y > rect.bottom - ZONE && y < rect.bottom) {
+        container.scrollTop += SPEED * (1 - (rect.bottom - y) / ZONE)
+      }
+      scrollRafRef.current = requestAnimationFrame(tick)
+    }
+    scrollRafRef.current = requestAnimationFrame(tick)
+  }
+
+  function stopAutoScroll() {
+    if (scrollRafRef.current !== null) {
+      cancelAnimationFrame(scrollRafRef.current)
+      scrollRafRef.current = null
+    }
+    scrollElRef.current = null
+  }
+
+  useEffect(() => () => stopAutoScroll(), [])
 
   const feasibleVenueStops = result.stops.filter(
     (s): s is ScheduledStop => s.feasible && !('isLunch' in s),
@@ -103,23 +136,46 @@ export function RoutePanel({ result }: Props) {
           venueStepNumber++
 
           return (
-            <div
-              key={'venue' in stop ? stop.venue.id : idx}
-              draggable={venueStops.length > 1}
-              onDragStart={() => { dragIndexRef.current = currentVenueIndex }}
-              onDragOver={(e) => { e.preventDefault(); setDragOverIndex(currentVenueIndex) }}
-              onDragLeave={() => setDragOverIndex(null)}
-              onDrop={() => {
-                if (dragIndexRef.current !== null) reorder(dragIndexRef.current, currentVenueIndex)
-                dragIndexRef.current = null
-                setDragOverIndex(null)
-              }}
-              onDragEnd={() => { dragIndexRef.current = null; setDragOverIndex(null) }}
-              className={`flex items-stretch gap-1.5 transition-opacity ${dragOverIndex === currentVenueIndex && dragIndexRef.current !== currentVenueIndex ? 'opacity-40' : 'opacity-100'}`}
-            >
-              {venueStops.length > 1 && <DragHandle />}
-              <div className="flex-1 min-w-0">
-                <RouteStep stop={stop} stepNumber={venueStepNumber} />
+            <div key={'venue' in stop ? stop.venue.id : idx}>
+              {/* Drop placeholder shown above this card when dragging over it */}
+              {dragOverIndex === currentVenueIndex && dragIndexRef.current !== null && dragIndexRef.current !== currentVenueIndex && (
+                <div className="h-14 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 mb-2" />
+              )}
+              <div
+                draggable={venueStops.length > 1}
+                onDragStart={(e) => {
+                  dragIndexRef.current = currentVenueIndex
+                  // Find the scrollable panel ancestor and start auto-scroll
+                  let el = e.currentTarget.parentElement
+                  while (el) {
+                    const ov = window.getComputedStyle(el).overflowY
+                    if (ov === 'auto' || ov === 'scroll') { startAutoScroll(el); break }
+                    el = el.parentElement
+                  }
+                }}
+                onDragOver={(e) => {
+                  e.preventDefault()
+                  dragYRef.current = e.clientY
+                  setDragOverIndex(currentVenueIndex)
+                }}
+                onDragLeave={() => setDragOverIndex(null)}
+                onDrop={() => {
+                  if (dragIndexRef.current !== null) reorder(dragIndexRef.current, currentVenueIndex)
+                  dragIndexRef.current = null
+                  setDragOverIndex(null)
+                  stopAutoScroll()
+                }}
+                onDragEnd={() => {
+                  dragIndexRef.current = null
+                  setDragOverIndex(null)
+                  stopAutoScroll()
+                }}
+                className={`flex items-stretch gap-1.5 transition-opacity ${dragOverIndex === currentVenueIndex && dragIndexRef.current !== currentVenueIndex ? 'opacity-40' : 'opacity-100'}`}
+              >
+                {venueStops.length > 1 && <DragHandle />}
+                <div className="flex-1 min-w-0">
+                  <RouteStep stop={stop} stepNumber={venueStepNumber} />
+                </div>
               </div>
             </div>
           )
