@@ -23,14 +23,15 @@ export interface BookingInputs {
 
 export interface ScheduledStop {
   venue: Venue
-  arrivalTime: string      // "10:18" — when group physically arrives
-  entryTime?: string       // "10:30" — actual slot entry (only set when different from arrivalTime)
-  departureTime: string    // "12:00"
-  travelFromPrev: number   // minutes of travel (0 for first stop)
-  waitMins: number         // minutes waiting for slot (0 for continuous venues)
-  bufferMins: number       // buffer applied after this stop
+  arrivalTime: string
+  entryTime?: string
+  departureTime: string
+  travelFromPrev: number
+  waitMins: number
+  bufferMins: number
   feasible: true
   isLunch?: false
+  lateWarning?: string   // set when stop runs past the tour end time — shown as soft amber note
 }
 
 export interface LunchStop {

@@ -25,6 +25,7 @@ export function RoutePanel({ result }: Props) {
     (s): s is ScheduledStop => s.feasible && !('isLunch' in s),
   )
   const infeasibleCount = result.stops.filter((s) => !s.feasible).length
+  const lateCount = result.stops.filter((s): s is ScheduledStop => s.feasible && !('isLunch' in s) && !!s.lateWarning).length
   const totalMins = result.totalDurationMins
   const hours = Math.floor(totalMins / 60)
   const mins = totalMins % 60
@@ -46,22 +47,29 @@ export function RoutePanel({ result }: Props) {
     <div className="flex flex-col gap-4">
 
       {/* Summary banner */}
-      <div className={`rounded-xl p-4 ${infeasibleCount === 0 ? 'bg-emerald-50 border border-emerald-200' : 'bg-amber-50 border border-amber-200'}`}>
+      <div className={`rounded-xl p-4 ${infeasibleCount > 0 ? 'bg-red-50 border border-red-200' : lateCount > 0 ? 'bg-amber-50 border border-amber-200' : 'bg-emerald-50 border border-emerald-200'}`}>
         <div className="flex items-center gap-2 mb-3">
-          {infeasibleCount === 0 ? (
+          {infeasibleCount > 0 ? (
+            <>
+              <svg className="w-4 h-4 text-red-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+              <span className="text-sm font-semibold text-red-800">{infeasibleCount} stop{infeasibleCount !== 1 ? 's' : ''} can't be scheduled</span>
+            </>
+          ) : lateCount > 0 ? (
+            <>
+              <svg className="w-4 h-4 text-amber-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <span className="text-sm font-semibold text-amber-800">Runs past target end time</span>
+            </>
+          ) : (
             <>
               <svg className="w-4 h-4 text-emerald-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 6L9 17l-5-5"/>
               </svg>
               <span className="text-sm font-semibold text-emerald-800">All stops fit</span>
-            </>
-          ) : (
-            <>
-              <svg className="w-4 h-4 text-amber-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
-                <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
-              </svg>
-              <span className="text-sm font-semibold text-amber-800">{infeasibleCount} stop{infeasibleCount !== 1 ? 's' : ''} can't be scheduled</span>
             </>
           )}
         </div>
@@ -82,7 +90,7 @@ export function RoutePanel({ result }: Props) {
         {guestLabel && <p className="text-xs text-navy-muted mt-2">{guestLabel}</p>}
       </div>
 
-      {result.hasInfeasible && <FeasibilityBanner />}
+      {infeasibleCount > 0 && <FeasibilityBanner />}
 
       <div className="flex flex-col gap-2">
         {result.stops.map((stop, idx) => {

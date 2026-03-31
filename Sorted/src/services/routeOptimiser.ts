@@ -65,26 +65,20 @@ export function scheduleVenues(
       const entryMins = check.entryMins!
       const departMins = entryMins + venue.avgVisitDurationMins
 
-      if (departMins > endTimeMins) {
-        stops.push({
-          venue,
-          feasible: false,
-          reason: `${venue.name} would end at ${formatTime(departMins)}, after your ${formatTime(endTimeMins)} tour end time.`,
-        })
-        cursor = departMins + bufferMins
-      } else {
-        stops.push({
-          venue,
-          arrivalTime: formatTime(arrivalMins),
-          entryTime: arrivalMins < entryMins ? formatTime(entryMins) : undefined,
-          departureTime: formatTime(departMins),
-          travelFromPrev: travelMins,
-          waitMins: entryMins - arrivalMins,
-          bufferMins,
-          feasible: true,
-        })
-        cursor = departMins + bufferMins
-      }
+      stops.push({
+        venue,
+        arrivalTime: formatTime(arrivalMins),
+        entryTime: arrivalMins < entryMins ? formatTime(entryMins) : undefined,
+        departureTime: formatTime(departMins),
+        travelFromPrev: travelMins,
+        waitMins: entryMins - arrivalMins,
+        bufferMins,
+        feasible: true,
+        lateWarning: departMins > endTimeMins
+          ? `Ends at ${formatTime(departMins)} — ${Math.round(departMins - endTimeMins)} min past your ${formatTime(endTimeMins)} target`
+          : undefined,
+      })
+      cursor = departMins + bufferMins
     }
 
     // Insert lunch after the chosen stop (1-based)

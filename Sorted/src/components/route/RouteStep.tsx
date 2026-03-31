@@ -104,7 +104,7 @@ export function RouteStep({ stop, stepNumber }: Props) {
   }
 
   return (
-    <div className="rounded-xl border border-slate-200 bg-surface-card p-4">
+    <div className={`rounded-xl border bg-surface-card p-4 ${stop.lateWarning ? 'border-amber-300' : 'border-slate-200'}`}>
       <div className="flex items-center gap-3 mb-3">
         <span className="shrink-0 w-6 h-6 rounded-full bg-navy text-white flex items-center justify-center text-xs font-bold">
           {stepNumber}
@@ -112,6 +112,9 @@ export function RouteStep({ stop, stepNumber }: Props) {
         <p className="text-sm font-semibold text-navy leading-tight">{stop.venue.name}</p>
       </div>
       <div className="flex flex-col gap-0.5">{rows}</div>
+      {stop.lateWarning && (
+        <p className="mt-2 text-xs text-amber-600">{stop.lateWarning}</p>
+      )}
     </div>
   )
 }
