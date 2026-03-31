@@ -20,6 +20,7 @@ export function RoutePanel({ result }: Props) {
 
   const dragIndexRef = useRef<number | null>(null)
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null)
+  const dragEnterCountRef = useRef(0)  // tracks nested dragenter/dragleave to avoid flicker
   const scrollElRef = useRef<HTMLElement | null>(null)
   const scrollRafRef = useRef<number | null>(null)
   const dragYRef = useRef(0)
@@ -136,16 +137,40 @@ export function RoutePanel({ result }: Props) {
           venueStepNumber++
 
           return (
-            <div key={'venue' in stop ? stop.venue.id : idx}>
-              {/* Drop placeholder shown above this card when dragging over it */}
+            <div
+              key={'venue' in stop ? stop.venue.id : idx}
+              onDragEnter={(e) => {
+                e.preventDefault()
+                dragEnterCountRef.current++
+                dragYRef.current = e.clientY
+                setDragOverIndex(currentVenueIndex)
+              }}
+              onDragOver={(e) => {
+                e.preventDefault()
+                dragYRef.current = e.clientY
+              }}
+              onDragLeave={() => {
+                dragEnterCountRef.current--
+                if (dragEnterCountRef.current === 0) setDragOverIndex(null)
+              }}
+              onDrop={() => {
+                dragEnterCountRef.current = 0
+                if (dragIndexRef.current !== null) reorder(dragIndexRef.current, currentVenueIndex)
+                dragIndexRef.current = null
+                setDragOverIndex(null)
+                stopAutoScroll()
+              }}
+            >
+              {/* Drop placeholder shown above this card when it's the drop target */}
               {dragOverIndex === currentVenueIndex && dragIndexRef.current !== null && dragIndexRef.current !== currentVenueIndex && (
-                <div className="h-14 rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 mb-2" />
+                <div className="h-14 rounded-xl border-2 border-dashed border-navy/30 bg-slate-50 mb-2 transition-all" />
               )}
               <div
                 draggable={venueStops.length > 1}
                 onDragStart={(e) => {
                   dragIndexRef.current = currentVenueIndex
-                  // Find the scrollable panel ancestor and start auto-scroll
+                  dragEnterCountRef.current = 0
+                  // Find scrollable panel ancestor
                   let el = e.currentTarget.parentElement
                   while (el) {
                     const ov = window.getComputedStyle(el).overflowY
@@ -153,20 +178,9 @@ export function RoutePanel({ result }: Props) {
                     el = el.parentElement
                   }
                 }}
-                onDragOver={(e) => {
-                  e.preventDefault()
-                  dragYRef.current = e.clientY
-                  setDragOverIndex(currentVenueIndex)
-                }}
-                onDragLeave={() => setDragOverIndex(null)}
-                onDrop={() => {
-                  if (dragIndexRef.current !== null) reorder(dragIndexRef.current, currentVenueIndex)
-                  dragIndexRef.current = null
-                  setDragOverIndex(null)
-                  stopAutoScroll()
-                }}
                 onDragEnd={() => {
                   dragIndexRef.current = null
+                  dragEnterCountRef.current = 0
                   setDragOverIndex(null)
                   stopAutoScroll()
                 }}
