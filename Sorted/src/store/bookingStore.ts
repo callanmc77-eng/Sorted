@@ -8,6 +8,7 @@ interface BookingState extends BookingInputs {
   endTime: string
   includeLunch: boolean
   lunchDurationMins: number
+  lunchAfterStop: number | null   // 1-based stop index, null = not set
   routeResult: RouteResult | null
   isCalculating: boolean
   error: string | null
@@ -24,6 +25,7 @@ interface BookingState extends BookingInputs {
   setEndTime: (time: string) => void
   setIncludeLunch: (v: boolean) => void
   setLunchDurationMins: (mins: number) => void
+  setLunchAfterStop: (stop: number | null) => void
   toggleVenue: (venueId: string) => void
   setRouteResult: (result: RouteResult | null) => void
   setCalculating: (v: boolean) => void
@@ -44,6 +46,7 @@ export const useBookingStore = create<BookingState>()((set) => ({
   endTime: TOUR_END_TIMES.full,
   includeLunch: false,
   lunchDurationMins: 60,
+  lunchAfterStop: null,
   routeResult: null,
   isCalculating: false,
   error: null,
@@ -65,6 +68,7 @@ export const useBookingStore = create<BookingState>()((set) => ({
   setEndTime: (endTime) => set({ endTime, tourDuration: 'custom', routeResult: null }),
   setIncludeLunch: (includeLunch) => set({ includeLunch, routeResult: null }),
   setLunchDurationMins: (lunchDurationMins) => set({ lunchDurationMins, routeResult: null }),
+  setLunchAfterStop: (lunchAfterStop) => set({ lunchAfterStop, routeResult: null }),
   toggleVenue: (venueId) =>
     set((state) => ({
       selectedVenueIds: state.selectedVenueIds.includes(venueId)

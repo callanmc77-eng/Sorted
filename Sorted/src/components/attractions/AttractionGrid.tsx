@@ -7,7 +7,7 @@ interface Props {
 }
 
 export function AttractionGrid({ venues }: Props) {
-  const { selectedVenueIds, toggleVenue, includeLunch, setIncludeLunch } = useBookingStore()
+  const { selectedVenueIds, toggleVenue } = useBookingStore()
 
   return (
     <div>
@@ -26,30 +26,6 @@ export function AttractionGrid({ venues }: Props) {
             onToggle={() => toggleVenue(venue.id)}
           />
         ))}
-
-        {/* Lunch card */}
-        <button
-          type="button"
-          onClick={() => setIncludeLunch(!includeLunch)}
-          className={`rounded-xl border p-4 text-left transition-all
-            ${includeLunch
-              ? 'bg-amber-50 border-amber-300 shadow-sm'
-              : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-sm'
-            }`}
-        >
-          <div className="flex items-start justify-between gap-2">
-            <div>
-              <p className="text-sm font-semibold text-navy">Lunch break</p>
-              <p className="text-xs text-navy-muted mt-0.5">1 hour · at last stop</p>
-            </div>
-            <span className="text-lg leading-none mt-0.5">🍽</span>
-          </div>
-          {includeLunch && (
-            <span className="mt-2 inline-block text-xs font-medium text-amber-700 bg-amber-100 rounded-full px-2 py-0.5">
-              Included
-            </span>
-          )}
-        </button>
       </div>
     </div>
   )

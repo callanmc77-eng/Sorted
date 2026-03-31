@@ -17,6 +17,7 @@ export function useRouteBuilder(isLoaded: boolean) {
     endTime,
     includeLunch,
     lunchDurationMins,
+    lunchAfterStop,
     selectedVenueIds,
     setRouteResult,
     setCalculating,
@@ -69,6 +70,7 @@ export function useRouteBuilder(isLoaded: boolean) {
           parseTime(endTime),
           includeLunch,
           lunchDurationMins,
+          lunchAfterStop,
         ),
         30_000,
       )
@@ -79,7 +81,7 @@ export function useRouteBuilder(isLoaded: boolean) {
     } finally {
       setCalculating(false)
     }
-  }, [isLoaded, date, startTime, endTime, startLocation, transportMode, bufferMins, includeLunch, lunchDurationMins, selectedVenueIds, venues, setRouteResult, setCalculating, setError])
+  }, [isLoaded, date, startTime, endTime, startLocation, transportMode, bufferMins, includeLunch, lunchDurationMins, lunchAfterStop, selectedVenueIds, venues, setRouteResult, setCalculating, setError])
 
   return { buildRoute }
 }

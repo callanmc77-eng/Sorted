@@ -55,6 +55,7 @@ export async function buildOptimalRoute(
   endTimeMins = 18 * 60,
   includeLunch = false,
   lunchDurationMins = 60,
+  lunchAfterStop: number | null = null,
 ): Promise<RouteResult> {
   const n = venues.length
 
@@ -93,7 +94,8 @@ export async function buildOptimalRoute(
   const stops: RouteStop[] = []
   let cursor = startTimeMins
   let prevNode = 0
-  const lunchAfterIndex = includeLunch ? Math.floor(n / 2) : -1
+  // lunchAfterStop is 1-based; insert after the Nth venue in the optimised order
+  const lunchAfterIndex = includeLunch && lunchAfterStop != null ? lunchAfterStop : -1
   let feasibleCount = 0
 
   for (let i = 0; i < order.length; i++) {
@@ -139,8 +141,8 @@ export async function buildOptimalRoute(
 
     prevNode = nodeIdx
 
-    // Insert lunch after the midpoint stop
-    if (i === lunchAfterIndex - 1) {
+    // Insert lunch after the chosen stop index
+    if (i + 1 === lunchAfterIndex) {
       stops.push({
         isLunch: true,
         arrivalTime: formatTime(cursor),

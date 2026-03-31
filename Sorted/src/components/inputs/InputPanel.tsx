@@ -6,6 +6,7 @@ import { TourDurationPicker } from './TourDurationPicker'
 import { StartLocationInput } from './StartLocationInput'
 import { TransportToggle } from './TransportToggle'
 import { BufferInput } from './BufferInput'
+import { LunchInput } from './LunchInput'
 
 interface Props {
   isLoaded: boolean
@@ -30,7 +31,8 @@ export function InputPanel({ isLoaded }: Props) {
       <StartLocationInput value={startLocation} onChange={setStartLocation} isLoaded={isLoaded} />
       <TransportToggle value={transportMode} onChange={setTransportMode} />
 
-      <div className="border-t border-slate-100 pt-5">
+      <div className="border-t border-slate-100 pt-5 flex flex-col gap-5">
+        <LunchInput />
         <BufferInput />
       </div>
     </div>
