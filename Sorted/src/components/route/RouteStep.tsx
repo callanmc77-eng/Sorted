@@ -29,6 +29,18 @@ function Divider() {
   )
 }
 
+export function DragHandle() {
+  return (
+    <div className="flex items-center justify-center w-5 shrink-0 cursor-grab active:cursor-grabbing text-slate-300 hover:text-slate-400 transition-colors self-stretch py-1">
+      <svg width="12" height="20" viewBox="0 0 12 20" fill="currentColor">
+        <circle cx="4" cy="4" r="1.5"/><circle cx="8" cy="4" r="1.5"/>
+        <circle cx="4" cy="10" r="1.5"/><circle cx="8" cy="10" r="1.5"/>
+        <circle cx="4" cy="16" r="1.5"/><circle cx="8" cy="16" r="1.5"/>
+      </svg>
+    </div>
+  )
+}
+
 export function LunchStepCard({ stop }: { stop: LunchStop }) {
   return (
     <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">

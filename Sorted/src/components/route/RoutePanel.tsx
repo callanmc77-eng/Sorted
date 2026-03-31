@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { RouteResult, ScheduledStop, RouteStop } from '@/types/itinerary'
-import { RouteStep, LunchStepCard } from './RouteStep'
+import { RouteStep, LunchStepCard, DragHandle } from './RouteStep'
 import { FeasibilityBanner } from './FeasibilityBanner'
 import { useBookingStore } from '@/store/bookingStore'
 import { useReorderStops } from '@/hooks/useReorderStops'
@@ -84,10 +84,6 @@ export function RoutePanel({ result }: Props) {
 
       {result.hasInfeasible && <FeasibilityBanner />}
 
-      {venueStops.length > 1 && (
-        <p className="text-xs text-slate-400 text-center">Drag stops to reorder</p>
-      )}
-
       <div className="flex flex-col gap-2">
         {result.stops.map((stop, idx) => {
           if ('isLunch' in stop && stop.isLunch) {
@@ -101,21 +97,22 @@ export function RoutePanel({ result }: Props) {
           return (
             <div
               key={'venue' in stop ? stop.venue.id : idx}
-              draggable
+              draggable={venueStops.length > 1}
               onDragStart={() => { dragIndexRef.current = currentVenueIndex }}
               onDragOver={(e) => { e.preventDefault(); setDragOverIndex(currentVenueIndex) }}
               onDragLeave={() => setDragOverIndex(null)}
               onDrop={() => {
-                if (dragIndexRef.current !== null) {
-                  reorder(dragIndexRef.current, currentVenueIndex)
-                }
+                if (dragIndexRef.current !== null) reorder(dragIndexRef.current, currentVenueIndex)
                 dragIndexRef.current = null
                 setDragOverIndex(null)
               }}
               onDragEnd={() => { dragIndexRef.current = null; setDragOverIndex(null) }}
-              className={`transition-opacity ${dragOverIndex === currentVenueIndex && dragIndexRef.current !== currentVenueIndex ? 'opacity-50' : 'opacity-100'}`}
+              className={`flex items-stretch gap-1.5 transition-opacity ${dragOverIndex === currentVenueIndex && dragIndexRef.current !== currentVenueIndex ? 'opacity-40' : 'opacity-100'}`}
             >
-              <RouteStep stop={stop} stepNumber={venueStepNumber} />
+              {venueStops.length > 1 && <DragHandle />}
+              <div className="flex-1 min-w-0">
+                <RouteStep stop={stop} stepNumber={venueStepNumber} />
+              </div>
             </div>
           )
         })}
