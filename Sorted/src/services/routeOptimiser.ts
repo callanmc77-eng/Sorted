@@ -9,10 +9,6 @@ interface Coord {
   lng: number
 }
 
-/**
- * Geocodes an address string to coordinates using the Google Maps Geocoding API.
- * Throws a user-friendly error if the address can't be resolved.
- */
 export async function geocodeAddress(address: string): Promise<Coord> {
   return new Promise((resolve, reject) => {
     const geocoder = new google.maps.Geocoder()
@@ -34,74 +30,27 @@ export async function geocodeAddress(address: string): Promise<Coord> {
 }
 
 /**
- * Builds an optimised route using a nearest-neighbour greedy algorithm on travel
- * duration (not distance), then checks each stop for feasibility against venue hours.
- *
- * @param startCoord  Geocoded coordinates of the starting location
- * @param venues      Venues to visit (in any order — algorithm reorders them)
- * @param startTimeMins  Start time in minutes from midnight (e.g. 09:00 → 540)
- * @param dateStr     "YYYY-MM-DD" — used to check day-of-week opening hours
- * @param transportMode "DRIVING" | "WALKING"
- * @param bufferMins  Extra gap to add after each stop's departure (e.g. for restroom breaks, transfers)
- * @param endTimeMins Tour end cap in minutes from midnight — stops whose departure exceeds this are infeasible
+ * Runs the scheduling pass on an ordered list of venues using pre-fetched travel times.
+ * Used both by the initial build and by drag-reorder (no extra API call needed).
  */
-export async function buildOptimalRoute(
-  startCoord: Coord,
-  venues: Venue[],
+export function scheduleVenues(
+  venues: Venue[],           // in display order
+  travelFromStart: number[], // seconds from start to venues[i]
+  travelBetween: number[][],  // seconds from venues[i] to venues[j]
   startTimeMins: number,
   dateStr: string,
-  transportMode: TransportMode,
-  bufferMins = 0,
-  endTimeMins = 18 * 60,
-  includeLunch = false,
-  lunchDurationMins = 60,
-  lunchAfterStop: number | null = null,
-): Promise<RouteResult> {
-  const n = venues.length
-
-  // Build location list: index 0 = start, indices 1..n = venues
-  const locations: Coord[] = [startCoord, ...venues.map((v) => v.coordinates)]
-
-  // Fetch NxN+1 duration matrix
-  const matrix = await fetchDistanceMatrix(locations, transportMode)
-
-  // ── Nearest-neighbour TSP ──────────────────────────────────────────────────
-  const visited = new Set<number>()
-  const order: number[] = []
-  let current = 0
-
-  while (order.length < n) {
-    let nearest = -1
-    let shortestDuration = Infinity
-
-    for (let j = 1; j <= n; j++) {
-      if (!visited.has(j)) {
-        const dur = matrix.durations[current][j]
-        if (dur < shortestDuration) {
-          shortestDuration = dur
-          nearest = j
-        }
-      }
-    }
-
-    visited.add(nearest)
-    order.push(nearest)
-    current = nearest
-  }
-  // ── End TSP ───────────────────────────────────────────────────────────────
-
-  // Walk the ordered route, computing times and feasibility
+  bufferMins: number,
+  endTimeMins: number,
+  includeLunch: boolean,
+  lunchDurationMins: number,
+  lunchAfterStop: number | null,
+): Omit<RouteResult, 'venueOrder' | 'travelFromStart' | 'travelBetween' | 'startTimeMins' | 'dateStr' | 'bufferMins' | 'endTimeMins' | 'includeLunch' | 'lunchDurationMins' | 'lunchAfterStop'> {
   const stops: RouteStop[] = []
   let cursor = startTimeMins
-  let prevNode = 0
-  // lunchAfterStop is 1-based; insert after the Nth venue in the optimised order
-  const lunchAfterIndex = includeLunch && lunchAfterStop != null ? lunchAfterStop : -1
-  let feasibleCount = 0
 
-  for (let i = 0; i < order.length; i++) {
-    const nodeIdx = order[i]
-    const venue = venues[nodeIdx - 1] // nodeIdx is 1-based
-    const travelSecs = matrix.durations[prevNode][nodeIdx]
+  for (let i = 0; i < venues.length; i++) {
+    const venue = venues[i]
+    const travelSecs = i === 0 ? travelFromStart[i] : travelBetween[i - 1][i]
     const travelMins = Math.ceil(travelSecs / 60)
 
     cursor += travelMins
@@ -120,7 +69,7 @@ export async function buildOptimalRoute(
         stops.push({
           venue,
           feasible: false,
-          reason: `${venue.name} would end at ${formatTime(departMins)}, after your ${formatTime(endTimeMins)} tour end time. Remove it or switch to a full day.`,
+          reason: `${venue.name} would end at ${formatTime(departMins)}, after your ${formatTime(endTimeMins)} tour end time.`,
         })
         cursor = departMins + bufferMins
       } else {
@@ -135,14 +84,11 @@ export async function buildOptimalRoute(
           feasible: true,
         })
         cursor = departMins + bufferMins
-        feasibleCount++
       }
     }
 
-    prevNode = nodeIdx
-
-    // Insert lunch after the chosen stop index
-    if (i + 1 === lunchAfterIndex) {
+    // Insert lunch after the chosen stop (1-based)
+    if (includeLunch && lunchAfterStop != null && i + 1 === lunchAfterStop) {
       stops.push({
         isLunch: true,
         arrivalTime: formatTime(cursor),
@@ -167,5 +113,82 @@ export async function buildOptimalRoute(
     totalDurationMins: cursor - startTimeMins,
     endTime,
     hasInfeasible: stops.some((s) => !s.feasible),
+  }
+}
+
+export async function buildOptimalRoute(
+  startCoord: Coord,
+  venues: Venue[],
+  startTimeMins: number,
+  dateStr: string,
+  transportMode: TransportMode,
+  bufferMins = 0,
+  endTimeMins = 18 * 60,
+  includeLunch = false,
+  lunchDurationMins = 60,
+  lunchAfterStop: number | null = null,
+  pinnedLastId: string | null = null,
+): Promise<RouteResult> {
+  const n = venues.length
+  const locations: Coord[] = [startCoord, ...venues.map((v) => v.coordinates)]
+  const matrix = await fetchDistanceMatrix(locations, transportMode)
+
+  // Nearest-neighbour TSP — exclude pinned venue from normal ordering
+  const pinnedIdx = pinnedLastId ? venues.findIndex((v) => v.id === pinnedLastId) : -1
+  const visited = new Set<number>()
+  if (pinnedIdx >= 0) visited.add(pinnedIdx + 1) // reserve it
+
+  const order: number[] = []
+  let current = 0
+
+  while (order.length < (pinnedIdx >= 0 ? n - 1 : n)) {
+    let nearest = -1
+    let shortestDuration = Infinity
+    for (let j = 1; j <= n; j++) {
+      if (!visited.has(j)) {
+        const dur = matrix.durations[current][j]
+        if (dur < shortestDuration) { shortestDuration = dur; nearest = j }
+      }
+    }
+    visited.add(nearest)
+    order.push(nearest)
+    current = nearest
+  }
+
+  // Append pinned venue last
+  if (pinnedIdx >= 0) order.push(pinnedIdx + 1)
+
+  // Build per-venue travel lookup arrays (0-indexed into orderedVenues)
+  const orderedVenues = order.map((nodeIdx) => venues[nodeIdx - 1])
+  const travelFromStart = order.map((nodeIdx) => matrix.durations[0][nodeIdx])
+  const travelBetween: number[][] = order.map((fromNode) =>
+    order.map((toNode) => matrix.durations[fromNode][toNode])
+  )
+
+  const scheduled = scheduleVenues(
+    orderedVenues,
+    travelFromStart,
+    travelBetween,
+    startTimeMins,
+    dateStr,
+    bufferMins,
+    endTimeMins,
+    includeLunch,
+    lunchDurationMins,
+    lunchAfterStop,
+  )
+
+  return {
+    ...scheduled,
+    venueOrder: orderedVenues.map((v) => v.id),
+    travelFromStart,
+    travelBetween,
+    startTimeMins,
+    dateStr,
+    bufferMins,
+    endTimeMins,
+    includeLunch,
+    lunchDurationMins,
+    lunchAfterStop,
   }
 }

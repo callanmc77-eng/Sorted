@@ -56,4 +56,19 @@ export interface RouteResult {
   totalDurationMins: number
   endTime: string
   hasInfeasible: boolean
+  // Stored so drag-reorder can reschedule without a new API call
+  // venueOrder[i] = venue id at position i in the optimised order
+  venueOrder: string[]
+  // travelSeconds[i][j] = travel seconds from venue i to venue j (0-indexed into venueOrder)
+  // index -1 conceptually = start location
+  travelFromStart: number[]   // travelFromStart[i] = seconds from start to venueOrder[i]
+  travelBetween: number[][]   // travelBetween[i][j] = seconds from venueOrder[i] to venueOrder[j]
+  // Scheduling params — stored so reorder can replay without re-reading store
+  startTimeMins: number
+  dateStr: string
+  bufferMins: number
+  endTimeMins: number
+  includeLunch: boolean
+  lunchDurationMins: number
+  lunchAfterStop: number | null
 }

@@ -1,14 +1,26 @@
-import type { RouteResult, ScheduledStop } from '@/types/itinerary'
+import { useRef, useState } from 'react'
+import type { RouteResult, ScheduledStop, RouteStop } from '@/types/itinerary'
 import { RouteStep, LunchStepCard } from './RouteStep'
 import { FeasibilityBanner } from './FeasibilityBanner'
 import { useBookingStore } from '@/store/bookingStore'
+import { useReorderStops } from '@/hooks/useReorderStops'
 
 interface Props {
   result: RouteResult
 }
 
+// Separate out venue stops (excluding lunch) for drag indexing
+function getVenueStops(stops: RouteStop[]): (ScheduledStop | Extract<RouteStop, { feasible: false }>)[] {
+  return stops.filter((s): s is ScheduledStop | Extract<RouteStop, { feasible: false }> => !('isLunch' in s))
+}
+
 export function RoutePanel({ result }: Props) {
   const { startTime, adults, children } = useBookingStore()
+  const { reorder } = useReorderStops()
+
+  const dragIndexRef = useRef<number | null>(null)
+  const [dragOverIndex, setDragOverIndex] = useState<number | null>(null)
+
   const feasibleVenueStops = result.stops.filter(
     (s): s is ScheduledStop => s.feasible && !('isLunch' in s),
   )
@@ -16,16 +28,19 @@ export function RoutePanel({ result }: Props) {
   const totalMins = result.totalDurationMins
   const hours = Math.floor(totalMins / 60)
   const mins = totalMins % 60
-  const durationLabel = hours > 0
-    ? mins > 0 ? `${hours}h ${mins}m` : `${hours}h`
-    : `${mins}m`
+  const durationLabel = hours > 0 ? (mins > 0 ? `${hours}h ${mins}m` : `${hours}h`) : `${mins}m`
 
   const guestLabel = [
     adults > 0 ? `${adults} adult${adults !== 1 ? 's' : ''}` : '',
     children > 0 ? `${children} child${children !== 1 ? 'ren' : ''}` : '',
   ].filter(Boolean).join(', ')
 
+  const venueStops = getVenueStops(result.stops)
+
+  // Build render list: interleave venue stops with lunch cards
+  // Track venue stop index for drag purposes
   let venueStepNumber = 0
+  let venueStopIndex = 0
 
   return (
     <div className="flex flex-col gap-4">
@@ -50,7 +65,6 @@ export function RoutePanel({ result }: Props) {
             </>
           )}
         </div>
-
         <div className="grid grid-cols-3 gap-2">
           <div className="bg-white/70 rounded-lg px-2 py-1.5 text-center">
             <p className="text-lg font-bold text-navy">{feasibleVenueStops.length}</p>
@@ -65,26 +79,44 @@ export function RoutePanel({ result }: Props) {
             <p className="text-xs text-navy-muted">window</p>
           </div>
         </div>
-
-        {guestLabel && (
-          <p className="text-xs text-navy-muted mt-2">{guestLabel}</p>
-        )}
+        {guestLabel && <p className="text-xs text-navy-muted mt-2">{guestLabel}</p>}
       </div>
 
       {result.hasInfeasible && <FeasibilityBanner />}
+
+      {venueStops.length > 1 && (
+        <p className="text-xs text-slate-400 text-center">Drag stops to reorder</p>
+      )}
 
       <div className="flex flex-col gap-2">
         {result.stops.map((stop, idx) => {
           if ('isLunch' in stop && stop.isLunch) {
             return <LunchStepCard key={`lunch-${idx}`} stop={stop} />
           }
+
+          const currentVenueIndex = venueStopIndex
+          venueStopIndex++
           venueStepNumber++
+
           return (
-            <RouteStep
+            <div
               key={'venue' in stop ? stop.venue.id : idx}
-              stop={stop}
-              stepNumber={venueStepNumber}
-            />
+              draggable
+              onDragStart={() => { dragIndexRef.current = currentVenueIndex }}
+              onDragOver={(e) => { e.preventDefault(); setDragOverIndex(currentVenueIndex) }}
+              onDragLeave={() => setDragOverIndex(null)}
+              onDrop={() => {
+                if (dragIndexRef.current !== null) {
+                  reorder(dragIndexRef.current, currentVenueIndex)
+                }
+                dragIndexRef.current = null
+                setDragOverIndex(null)
+              }}
+              onDragEnd={() => { dragIndexRef.current = null; setDragOverIndex(null) }}
+              className={`transition-opacity ${dragOverIndex === currentVenueIndex && dragIndexRef.current !== currentVenueIndex ? 'opacity-50' : 'opacity-100'}`}
+            >
+              <RouteStep stop={stop} stepNumber={venueStepNumber} />
+            </div>
           )
         })}
       </div>

@@ -9,6 +9,7 @@ interface BookingState extends BookingInputs {
   includeLunch: boolean
   lunchDurationMins: number
   lunchAfterStop: number | null   // 1-based stop index, null = not set
+  pinnedLastId: string | null     // venue id to always place last
   routeResult: RouteResult | null
   isCalculating: boolean
   error: string | null
@@ -26,6 +27,7 @@ interface BookingState extends BookingInputs {
   setIncludeLunch: (v: boolean) => void
   setLunchDurationMins: (mins: number) => void
   setLunchAfterStop: (stop: number | null) => void
+  setPinnedLastId: (id: string | null) => void
   toggleVenue: (venueId: string) => void
   setRouteResult: (result: RouteResult | null) => void
   setCalculating: (v: boolean) => void
@@ -47,6 +49,7 @@ export const useBookingStore = create<BookingState>()((set) => ({
   includeLunch: false,
   lunchDurationMins: 60,
   lunchAfterStop: null,
+  pinnedLastId: null,
   routeResult: null,
   isCalculating: false,
   error: null,
@@ -69,6 +72,7 @@ export const useBookingStore = create<BookingState>()((set) => ({
   setIncludeLunch: (includeLunch) => set({ includeLunch, routeResult: null }),
   setLunchDurationMins: (lunchDurationMins) => set({ lunchDurationMins, routeResult: null }),
   setLunchAfterStop: (lunchAfterStop) => set({ lunchAfterStop, routeResult: null }),
+  setPinnedLastId: (pinnedLastId) => set({ pinnedLastId, routeResult: null }),
   toggleVenue: (venueId) =>
     set((state) => ({
       selectedVenueIds: state.selectedVenueIds.includes(venueId)
