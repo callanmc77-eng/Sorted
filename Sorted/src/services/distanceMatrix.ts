@@ -7,46 +7,74 @@ export interface DistanceMatrix {
   distances: number[][]
 }
 
+// Maps our internal transport mode to the Routes API RouteTravelMode values
+const ROUTE_TRAVEL_MODE: Record<TransportMode, string> = {
+  DRIVING: 'DRIVE',
+  WALKING: 'WALK',
+}
+
 export async function fetchDistanceMatrix(
   locations: { lat: number; lng: number }[],
   mode: TransportMode,
 ): Promise<DistanceMatrix> {
-  return new Promise((resolve, reject) => {
-    const service = new google.maps.DistanceMatrixService()
-    const latLngs = locations.map((l) => new google.maps.LatLng(l.lat, l.lng))
+  const n = locations.length
+  const durations: number[][] = Array.from({ length: n }, () => new Array(n).fill(0))
+  const distances: number[][] = Array.from({ length: n }, () => new Array(n).fill(0))
 
-    service.getDistanceMatrix(
-      {
-        origins: latLngs,
-        destinations: latLngs,
-        travelMode: google.maps.TravelMode[mode],
-        unitSystem: google.maps.UnitSystem.METRIC,
+  // Build origins/destinations for RouteMatrix
+  const waypoints = locations.map((loc) => ({
+    waypoint: { location: { latLng: { latitude: loc.lat, longitude: loc.lng } } },
+  }))
+
+  const requestBody = {
+    origins: waypoints,
+    destinations: waypoints,
+    travelMode: ROUTE_TRAVEL_MODE[mode],
+    routingPreference: mode === 'DRIVING' ? 'TRAFFIC_UNAWARE' : undefined,
+  }
+
+  const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY
+
+  const response = await fetch(
+    'https://routes.googleapis.com/distanceMatrix/v2:computeRouteMatrix',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Goog-Api-Key': apiKey,
+        'X-Goog-FieldMask': 'originIndex,destinationIndex,duration,distanceMeters,status',
       },
-      (response, status) => {
-        if (status !== google.maps.DistanceMatrixStatus.OK || !response) {
-          reject(new Error(`Distance Matrix API error: ${status}`))
-          return
-        }
+      body: JSON.stringify(requestBody),
+    },
+  )
 
-        const n = locations.length
-        const durations: number[][] = Array.from({ length: n }, () => new Array(n).fill(0))
-        const distances: number[][] = Array.from({ length: n }, () => new Array(n).fill(0))
+  if (!response.ok) {
+    throw new Error(`Routes API error: ${response.status} ${response.statusText}`)
+  }
 
-        response.rows.forEach((row, i) => {
-          row.elements.forEach((el, j) => {
-            if (el.status === 'OK') {
-              durations[i][j] = el.duration.value
-              distances[i][j] = el.distance.value
-            } else {
-              // Fallback sentinel value (will not be chosen as nearest)
-              durations[i][j] = 9_999_999
-              distances[i][j] = 9_999_999
-            }
-          })
-        })
+  // Routes API returns a newline-delimited JSON stream (array of elements)
+  const elements: Array<{
+    originIndex: number
+    destinationIndex: number
+    duration?: string    // e.g. "300s"
+    distanceMeters?: number
+    status?: { code: number }
+  }> = await response.json()
 
-        resolve({ durations, distances })
-      },
-    )
-  })
+  for (const el of elements) {
+    const i = el.originIndex ?? 0
+    const j = el.destinationIndex ?? 0
+    // status code 0 = OK
+    if (!el.status || el.status.code === 0) {
+      // duration is a string like "300s"
+      const secs = el.duration ? parseInt(el.duration.replace('s', ''), 10) : 9_999_999
+      durations[i][j] = isNaN(secs) ? 9_999_999 : secs
+      distances[i][j] = el.distanceMeters ?? 9_999_999
+    } else {
+      durations[i][j] = 9_999_999
+      distances[i][j] = 9_999_999
+    }
+  }
+
+  return { durations, distances }
 }

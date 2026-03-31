@@ -57,9 +57,23 @@ export function VenueEditModal({ venue, onClose }: Props) {
   function normaliseTime(val: string): string {
     // Browser may return 12h format on some locales — force to HH:MM 24h
     if (!val) return val
-    // Already HH:MM
+    // Already HH:MM 24h
     if (/^\d{2}:\d{2}$/.test(val)) return val
-    // Try parsing via Date
+    // H:MM (single-digit hour, no AM/PM) e.g. "9:30"
+    if (/^\d:\d{2}$/.test(val)) return val.padStart(5, '0')
+
+    // Windows/locale 12h: "7:00 AM", "7:00 PM", "12:30 PM", "12:30 AM"
+    const ampm = val.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i)
+    if (ampm) {
+      let h = parseInt(ampm[1], 10)
+      const m = parseInt(ampm[2], 10)
+      const meridiem = ampm[3].toUpperCase()
+      if (meridiem === 'AM' && h === 12) h = 0
+      if (meridiem === 'PM' && h !== 12) h += 12
+      return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`
+    }
+
+    // Last resort: try ISO parse
     const d = new Date(`1970-01-01T${val}`)
     if (!isNaN(d.getTime())) {
       return `${String(d.getHours()).padStart(2, '0')}:${String(d.getMinutes()).padStart(2, '0')}`
