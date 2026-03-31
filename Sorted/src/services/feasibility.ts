@@ -61,7 +61,6 @@ export function checkVenueFeasibility(
   }
 
   const openMins = parseTime(hours.open)
-  const closeMins = parseTime(hours.close)
   const lastEntryMins = parseTime(venue.lastEntry)
 
   // Find the next valid entry slot at or after arrival
@@ -90,19 +89,10 @@ export function checkVenueFeasibility(
   }
 
   const waitMins = slot - arrivalMins
-  const departMins = slot + venue.avgVisitDurationMins
-
-  if (departMins > closeMins) {
-    return {
-      feasible: false,
-      reason: `${venue.name} closes at ${hours.close} but the ${formatTime(slot)} entry would end at ${formatTime(departMins)}.`,
-    }
-  }
 
   return {
     feasible: true,
     entryMins: slot,
-    // Expose wait time in reason for display — not an error, just informational
     reason: waitMins > 0
       ? `${waitMins} min wait for ${formatTime(slot)} slot`
       : undefined,
